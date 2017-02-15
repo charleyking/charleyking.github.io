@@ -68,43 +68,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-afternoon" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/15/afternoon/" class="article-date">
-  <time datetime="2017-02-15T09:08:41.000Z" itemprop="datePublished">2017-02-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/15/afternoon/">afternoon</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>It seems hexo is much easy to use than jekyll.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/15/afternoon/" data-id="ciz6sim6h0008tgqaqcc3oych" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/02/14/hello-world/" class="article-date">
@@ -140,7 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/14/hello-world/" data-id="ciz6sim6h0009tgqapd6hdgf8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/14/hello-world/" data-id="ciz6yy0ga000yl4qainejv1vd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -150,10 +113,10 @@
 
 
   
-    <article id="post-2015-11-12-windows-advance" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-2016-10-27-rewrite-arraylist" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/12/2015-11-12-windows-advance/" class="article-date">
-  <time datetime="2015-11-12T09:08:41.000Z" itemprop="datePublished">2015-11-12</time>
+    <a href="/2016/10/27/2016-10-27-rewrite-arraylist/" class="article-date">
+  <time datetime="2016-10-27T09:08:41.000Z" itemprop="datePublished">2016-10-27</time>
 </a>
     
   </div>
@@ -164,66 +127,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/12/2015-11-12-windows-advance/">windows 快捷操作高级篇</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>上次介绍了windows系统上自带的一些快捷键，虽然有些很方便，但是毕竟还是太少了，而且无法自定义专属于自己的快捷键。所以我写了这么一篇教程，主要介绍windows平台上的autohotkey和chrome浏览器上的vimium插件。当掌握这两个神器之后，你会发现自己的工作效率会得到惊人的提升。</p>
-<p>玩游戏的同学应该都听说过按键精灵，它可以通过程序自动实行按键指令。autohotkey相比于按键精灵更加强大，几乎可以这么说–windows平台上所有可以自动化的东西都能够用autohotkey来实现。所以，经常有人把它称作是windows顶级神器。这神器唯一的缺点或许就是太强大了，导致刚上手的时候一脸懵逼。当然一般用户也用不到各种高级功能，只需要实现以下几个简单的功能，你就不会后悔安装autohotkey了。</p>
-<ul>
-<li><p>字符串自动补全</p>
-<p>  很多时候我们经常要重复输入一些句子，比如手机号码，账号，邮箱或者密码什么的，这时候使用ahk的字符串补全功能能够帮助你节省很多时间。当你输入关键词后，自动出现和你的关键词对应的字符串。</p>
-</li>
-<li><p>快捷键打开程序</p>
-<p>  windows自身就有快捷键可以打开一些软件，比如用win+num可以调用任务栏上相应位置的程序。但是如何更方便更灵活地使用快捷键呢？</p>
-<p>  其实，你只要在ahk的脚本编辑器里输入类似这样的命令，就可以实现这个目标了。</p>
-<p>  !e:: </p>
-<pre><code>run C:\Windows\System32\ev
-</code></pre><p>  return</p>
-</li>
-<li><p>快捷键打开网站</p>
-<p>  什么？网站也可以？那是当然的啊，网站本质上也是一个小程序嘛。所以只要把打开程序的命令中程序位置换成网址就好了。</p>
-</li>
-<li><p>替换组合键</p>
-<p>  使用笔记本电脑的同学可能经常有这样的感受，调用<code>alt + f4</code>来关闭一个程序的时候会很别扭，因为这两个键位置相差有点大，尤其是有些笔记本电脑使用功能键还必须先按下<code>Fn</code>，于是就不得不同时按住三个键。这就有点尴尬了，然而，使用ahk能够轻松解决这个问题。只需要将你顺手的快捷键设置为调用<code>alt+Fn+F4</code>这个组合键就可以了。</p>
-</li>
-</ul>
-<p>更多的功能就不展开来了，有兴趣的话可以到<a href="https://autohotkey.com/" target="_blank" rel="external">官网</a>和<a href="https://autohotkey.com/boards/viewforum.php?f=26&amp;sid=739ae6142fa2ebdd17f3b8d98c878af1" target="_blank" rel="external">中文论坛</a>看看，有很多有趣的帖子。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/12/2015-11-12-windows-advance/" data-id="ciz6sim6h0005tgqa49kwee5u" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2015-11-11-windows-medium" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/11/2015-11-11-windows-medium/" class="article-date">
-  <time datetime="2015-11-11T09:08:41.000Z" itemprop="datePublished">2015-11-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/11/2015-11-11-windows-medium/">windows 快捷操作进阶篇</a>
+      <a class="article-title" href="/2016/10/27/2016-10-27-rewrite-arraylist/">重写ArryList类</a>
     </h1>
   
 
@@ -232,28 +136,21 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>上次介绍了windows系统上一些自带的常用快捷键，有些确实很方便，也满足了我们的一部分需求。但是我们追求效率的步伐怎会止步于此？这一次我将会进一步介绍windows上提升效率的方法。</p>
+<p>我们知道，ArrayList的内部实现其实是一个对象数组，那么如何来重写一个ArrayList类呢？</p>
 </blockquote>
-<p>一：运行</p>
-<p>打开运行对话框的方法在上一篇提到过，就是win+r。这个运行框虽然可以打开文件，文档，程序等，但是打开文件和文档并不方便，我在后面会提到快速打开文件的更方便的方法。</p>
-<p>win+r用来打开程序是非常方便的，但是需要一些配置，配置完成后，只要在对话框中输入你为程序预先设置好的名字就能快速打开该程序。比如我为chrome浏览器设置的名字为c，因此win+r之后，只需键入一个c，就可以快速打开浏览器。是不是比返回桌面去点击浏览器的快捷方式方便多了？</p>
-<p>下面是配置方法：</p>
-<p>找到你想要设置快捷键的程序文件（在你安装程序的文件夹里，后缀.exe），右键创建快捷方式，然后将这个快捷方式的名字改成你最喜欢的，越简单越好（当然前提是容易记住），接着将这个快捷方式移动到<code>C:windowssystem32</code>文件夹里面。</p>
-<p>现在试一试win+r，输入设好的名字，相应的程序马上就打开了。</p>
-<p>ps：其实直接按win键调处开始菜单也可以直接输入简易名称打开相应程序的，比按win+r还更加方便一些，至于喜欢哪个方法就看个人喜好了。</p>
-<p>二：<strong>search everything</strong></p>
-<p>Everything<a href="https://www.voidtools.com/" target="_blank" rel="external">官网中文主页</a>是速度最快的文件名搜索软件。其速度之快令人震惊，几百G硬盘几十万个文件，可以在几秒钟之内完成索引；文件名搜索瞬间呈现结果。它小巧免费，支持中文，支持正则表达式。搜素文件和文件夹真是快的飞起，从此以后再也不用在我的电脑里面苦苦寻找那不知道放在哪里的多年前的小文件了。</p>
-<p>三：<strong>rainmeter</strong></p>
-<p>有人可能会感到奇怪，rainmeter不是windows的桌面美化软件吗，怎么会和快捷操作有关系呢。其实rainmeter社区有很多大神做了不计其数的皮肤，大多数是用于美化的，但是也有很大一部分是兼具美化与便捷的皮肤。</p>
-<p>进阶篇先介绍到这里，接下来我会给大家带来windows系统快捷操作高级篇。</p>
-
+<p>重写一个类其实非常简单，我们只要一个一个的实现这个类原本的方法就够了。所以首先新建一个类 MyArrayList。</p>
+<p>接下来给这个类添加一个身份，说明它可以做一个List该做的事情。怎么添加呢，只需要实现一个List接口就可以了。但是List接口中有非常多的方法，实现起来比较麻烦。这里我们就先写一个自己的接口，里面定义了6个最常用的方法，命名为MyArrayListInterface。然后只需要将MyArrayList类实现这个接口就可以了。</p>
+<p>在MyArrayList类中，我们首先定义一些变量。一个类无非就是两个部分，变量和方法。变量是一个类的基础，变量的作用就是存储数据，而大部分的方法都是对变量的修改或者获取。（其实这样想想还真是简单啊）。</p>
+<p>先是一个对象数组 Object[] objs;<br>然后是元素个数 size;</p>
+<p>OK，接下来我们开始逐一实现接口中的六个方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void add(Object obj) &#123;</div><div class="line">	// TODO Auto-generated method stub</div><div class="line">	objs[size++] = obj;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line">@Override</div><div class="line">public void remove(Object obj) &#123;</div><div class="line">	// TODO Auto-generated method stub</div><div class="line">	int flag = 0;</div><div class="line">	if (size == 0) &#123;</div><div class="line">		return;</div><div class="line">	&#125; else &#123;</div><div class="line">		for (int i=0; i&lt;size; i++) &#123;</div><div class="line">			if (objs[i].equals(obj)) &#123;</div><div class="line">				flag = i;</div><div class="line">				break;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		System.arraycopy(objs, flag+1, objs, flag, size-flag-1);</div><div class="line">		objs[size-1] = null;</div><div class="line">		size = size -1;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@Override</div><div class="line">public void remove(int index) &#123;</div><div class="line">	// TODO Auto-generated method stub</div><div class="line">	if (size == 0) &#123;</div><div class="line">		return;</div><div class="line">	&#125; else &#123;</div><div class="line">		objs[index] = null;</div><div class="line">		System.arraycopy(objs, index+1, objs, index, size-index-1);</div><div class="line">		objs[size-1] = null;</div><div class="line">		size = size-1;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@Override</div><div class="line">public Object get(int index) &#123;</div><div class="line">	// TODO Auto-generated method stub</div><div class="line">	return objs[index];</div><div class="line">&#125;</div><div class="line"></div><div class="line">@Override</div><div class="line">public int getSize() &#123;</div><div class="line">	// TODO Auto-generated method stub</div><div class="line">	return size;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@Override</div><div class="line">public void clear() &#123;</div><div class="line">	// TODO Auto-generated method stub</div><div class="line">	for (int i=0; i&lt;size; i++) &#123;</div><div class="line">		objs[i] = null;</div><div class="line">	&#125;</div><div class="line">	size = 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/11/2015-11-11-windows-medium/" data-id="ciz6sim560004tgqazo10en9c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/27/2016-10-27-rewrite-arraylist/" data-id="ciz6yy0g9000xl4qaj8coy45o" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
 
     </footer>
   </div>
@@ -262,10 +159,10 @@
 
 
   
-    <article id="post-2015-11-3-windows-basic" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-2016-06-08-javaweb-ssh" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/03/2015-11-3-windows-basic/" class="article-date">
-  <time datetime="2015-11-03T09:08:41.000Z" itemprop="datePublished">2015-11-03</time>
+    <a href="/2016/06/08/2016-06-08-javaweb-ssh/" class="article-date">
+  <time datetime="2016-06-08T09:08:41.000Z" itemprop="datePublished">2016-06-08</time>
 </a>
     
   </div>
@@ -276,7 +173,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/03/2015-11-3-windows-basic/">windows 快捷操作基础篇</a>
+      <a class="article-title" href="/2016/06/08/2016-06-08-javaweb-ssh/">javaEE 三大框架介绍</a>
     </h1>
   
 
@@ -284,272 +181,441 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>从网上汇总了一些windows系统上常用的快捷键，结合自己的使用经验，将平时使用电脑时最常用的快捷键记录在此。注意这里罗列的是平时最常用到的，其他的一般来说不怎么用到的并不在此列，如果想要完整列表，请参考该链接。<a href="http://baike.baidu.com/view/21079.htm?fromtitle=Windows%E5%BF%AB%E6%8D%B7%E9%94%AE&amp;fromid=948037&amp;type=syn" target="_blank" rel="external">键盘快捷键</a></p>
-</blockquote>
-<ul>
-<li>Enter 对于许多选定命令代替单击鼠标</li>
-<li>windows键或CTRL+ESC 打开开始菜单</li>
-<li>CTRL+SHIFT+ESC 或 CTRL+ALT+DELETE打开任务管理器</li>
-<li>DELETE删除被选中的项目，如果是文件，将被放入回收站</li>
-<li>SHIFT+DELETE 删除被选中的项目，如果是文件，将被直接删除而不是放入回收站</li>
-<li>CTRL+SHIFT+N 新建一个新的文件夹</li>
-<li>CTRL+A 全选文件夹内的文件</li>
-<li>CTRL+O 打开“打开文件”对话框</li>
-<li>CTRL+P 打开“打印”对话框</li>
-<li>CTRL+S 保存当前操作的文件</li>
-<li>CTRL+W关闭当前的窗口</li>
-<li>CTRL+ X剪切被选择的项目到剪贴板</li>
-<li>CTRL+C 复制被选择的项目到剪贴板</li>
-<li>CTRL+V 粘贴剪贴板中的内容到当前位置</li>
-<li>CTRL+Shift/space 切换中英文输入法</li>
-<li>CTRL+F4 关闭当前应用程序中的当前文本</li>
-<li>Ctrl+Tab 在选项卡上向前移动</li>
-<li>Ctrl+Shift+Tab 在选项卡上向后移动</li>
-<li>CTRL+Z 撤销上一步的操作</li>
-<li>CTRL+Y 重做上一步被撤销的操作</li>
-<li>ALT+F4 关闭当前应用程序</li>
-<li>ALT+SPACEBAR 打开程序最左上角的菜单</li>
-<li>ALT+TAB 切换当前程序 （加SHIFT反向）</li>
-<li>Windows键+B 选中桌面右下方工具栏</li>
-<li>Windows键+D 显示桌面</li>
-<li>Windows键+E 打开我的电脑</li>
-<li>Windows键+F 打开“查找：所有文件”对话框</li>
-<li>Windows键+L 锁定计算机或切换用户</li>
-<li>Windows键+M最小化所有窗口(shift反转）</li>
-<li>Windows键+R打开“运行”对话框</li>
-<li>Windows键 + T 循环切换任务栏上的程序</li>
-<li>Windows键 + Tab 使用 Aero Flip 3-D 循环切换任务栏上的程序</li>
-<li>Windows键 + 空格键 预览桌面</li>
-<li>Windows键+ 向上键最大化窗口</li>
-<li>Windows键+ 向下键最小化窗口</li>
-<li>Windows键+ Home最小化除活动窗口之外的所有窗口</li>
-<li>Windows键+ 数字 启动锁定到任务栏中的由该数字所表示位置处的程序。如果该程序已在运行，则切换到该程序</li>
-</ul>
-<p>OK，这是windows上平时最常用的快捷键，熟练掌握后能够极大的提高效率，配合笔记本上的触控板或者thinkpad上的小红帽，你就可以对鼠标说再见了。</p>
-<p>接下来我会给大家介绍windows系统快捷操作进阶，让工作效率进一步提升。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/03/2015-11-3-windows-basic/" data-id="ciz6sim6x000btgqa89rds5cf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2015-05-23-sumary-of-sql-syntax" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/23/2015-05-23-sumary-of-sql-syntax/" class="article-date">
-  <time datetime="2015-05-23T09:08:41.000Z" itemprop="datePublished">2015-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/23/2015-05-23-sumary-of-sql-syntax/">sql syntax</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>学了一个月的java，开始有入门的感觉。这段时间接触到了java的JDBC, 发现学习这部分的内容还是要有SQL的基础，于是花费了几天时间学习了一下SQL语法，并将其总结于下。</p>
-</blockquote>
-<p>操作数据库的方法有很多，而使用SQL是最直接，最普遍的操作方法。SQL就相当于数据库提供给外界的数据操作接口，无论是手动还是编程的方式，都可以向数据库发送SQL命令，数据库会根据命令做出相应的响应。</p>
-<p>SQL的语法相当简单，但是功能却不可小觑，它能对数据库实现完全的操控。而这种操控主要体现在四个方面：增，删，查，改。</p>
-<hr>
-<h3 id="首先是查找，这是操作数据库的基础，关键字SELECT"><a href="#首先是查找，这是操作数据库的基础，关键字SELECT" class="headerlink" title="首先是查找，这是操作数据库的基础，关键字SELECT"></a>首先是查找，这是操作数据库的基础，关键字SELECT</h3><ul>
-<li>SELECT <col> FROM <table> WHERE <condition> ORDER BY <col> ; //最基本，熟练掌握</condition></table></li>
-<li>高级过滤 SELECT [a,b] FROM table WHERE condition1 AND/OR condition2;</li>
-<li>通配符过滤 SELECT [a,b] FROM table WHERE a LIKE ‘fish%’; // [%],[_],[[]]三个通配符</li>
-<li>计算字段 SELECT a + ‘(‘+b+’)’ FROM table ORDER BY a; //拼接</li>
-<li>SELECT RTRIM(a)+’(‘RTRIM(b)’)’ AS c FROM table ORDER BY a; //列别名</li>
-<li>函数字段 SELECT [a,b] FROM table WHERE SOUNDEX(a) = SOUNDEX(‘tim’); //根据发音匹配</li>
-<li>汇总数据 SELECT AVG(a) AS c FROM table WHERE condition; // COUNT(), MAX(), MIN(), SUM()汇总函数</li>
-<li>分组数据 SELECT a, COUNT(*) AS c FROM table GROUP BY a; // 创建分组</li>
-<li>SELECT a, COUNT(*) AS c FROM table GROUP BY a HAVING condition; // 过滤分组</li>
-<li>SELECT - FROM - WHERE - GROUP BY - HAVING - ORDER BY // 分组语句的关键词顺序</li>
-<li>组合查询 SELECT [a,b] FROM table WHERE c IN(‘MI’) UNION SELECT [a,b] FROM table WHERE condition;</li>
-</ul>
-<h3 id="插入，关键字INSERT"><a href="#插入，关键字INSERT" class="headerlink" title="插入，关键字INSERT"></a>插入，关键字INSERT</h3><ul>
-<li>INSERT INTO <table> (col1,col2) VALUES(val1, val2);</table></li>
-<li>INSERT INTO <table2> (col1, col2) SELECT col1, col2 FROM <table1>; // 复制表数据</table1></table2></li>
-</ul>
-<h3 id="更新，关键字UPDATE"><a href="#更新，关键字UPDATE" class="headerlink" title="更新，关键字UPDATE"></a>更新，关键字UPDATE</h3><ul>
-<li>更新数据 UPDATE <table> SET <key-val> WHERE <condition>;</condition></key-val></table></li>
-</ul>
-<h3 id="删除，关键字DELETE"><a href="#删除，关键字DELETE" class="headerlink" title="删除，关键字DELETE"></a>删除，关键字DELETE</h3><ul>
-<li>删除数据 DELETE FROM <table> WHERE <condition>;</condition></table></li>
-</ul>
-<hr>
-<ul>
-<li>创建表 CREATE TABLE table {…};</li>
-<li>更新表 ALTER TABLE table ADD a CHAR(20);</li>
-<li>删除表 DROP TABLE table;</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/05/23/2015-05-23-sumary-of-sql-syntax/" data-id="ciz6sim4q0000tgqalij5n3uy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2015-03-11-start-github" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/03/11/2015-03-11-start-github/" class="article-date">
-  <time datetime="2015-03-11T09:08:41.000Z" itemprop="datePublished">2015-03-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/11/2015-03-11-start-github/">start using github</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一直以来，github的大名就如雷贯耳。虽然我半年多前就从了解到了这个神奇的网站，而且趁着当时的一时兴趣注册了账户，但是对于那时候的我来说这个网站还是太复杂了点，毕竟半年前的我还没有开始写代码，所以就算注册了这个代码管理软件也丝毫没有用处–总不能真的拿来当作网盘吧。</p>
-<p>于是眼睛一闭一睁时间就到了11月，半年来由于经常混迹于各种技术论坛，github的字眼是从来没有少出现在我眼前。我也不止一次兴致勃勃地打开那个熟悉的网页，鼓捣一番，然后又默默关掉–真的是用不来。每当新建了库之后，我根本不知道该如何上传，所以到后来我的主页上看起来虽然有好多的库，然而点进去之后却都是空的……<br>这种情况终于在前天开始改变了，想来自己学了大半年的cs，总还是有一些产出的，我也很想把自己的这些成果给别人看啊。在这种强烈的内因作用下，我下定了决心这一次要彻底搞明白github并将它使用起来。<br>查阅了资料之后发现原来基础是先学会git的使用，于是按照大家的推荐看了progit这本书，确实很好，看完前三章也就对git有了比较全面的了解并且基本上能够上手了。然后结合网上的各种教程，下载了git软件，开始对着教程在命令行里敲。失败了几次之后（第一次是生成密钥是密码弄错了导致后来根本上传不上去，还有一次是在github上删除了一个文件然后本地没有fetch下来导致又上传不上去…..总之踩了很多坑），终于成功把一个本地的库上传到了github上。成功了一次之后，那就是一发不可收拾了，我又使劲地传了四五个库上去……每次看到命令行出现的成功提示，真的是成就感满满啊。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/11/2015-03-11-start-github/" data-id="ciz6sim4q0001tgqak6y3pj5x" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2014-03-10-sample-markdown-syntax" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/03/10/2014-03-10-sample-markdown-syntax/" class="article-date">
-  <time datetime="2014-03-10T09:08:41.000Z" itemprop="datePublished">2014-03-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/03/10/2014-03-10-sample-markdown-syntax/">markdown syntax</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
-<h1 id="Heading-1"><a href="#Heading-1" class="headerlink" title="Heading 1"></a>Heading 1</h1><h2 id="Heading-2"><a href="#Heading-2" class="headerlink" title="Heading 2"></a>Heading 2</h2><h3 id="Heading-3"><a href="#Heading-3" class="headerlink" title="Heading 3"></a>Heading 3</h3><h4 id="Heading-4"><a href="#Heading-4" class="headerlink" title="Heading 4"></a>Heading 4</h4><h5 id="Heading-5"><a href="#Heading-5" class="headerlink" title="Heading 5"></a>Heading 5</h5><h6 id="Heading-6"><a href="#Heading-6" class="headerlink" title="Heading 6"></a>Heading 6</h6><h3 id="Body-text"><a href="#Body-text" class="headerlink" title="Body text"></a>Body text</h3><p>Lorem ipsum dolor sit amet, test link adipiscing elit. <strong>This is strong</strong>. Nullam dignissim convallis est. Quisque aliquam.</p>
-<p><em>This is emphasized</em>. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times <cite>(That’s a citation)</cite>. <u>Underline</u>. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
-<p>HTML and <abbr title="cascading stylesheets">CSS<abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</abbr></abbr></p>
-<h3 id="Blockquotes"><a href="#Blockquotes" class="headerlink" title="Blockquotes"></a>Blockquotes</h3><blockquote>
-<p>Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.</p>
-</blockquote>
-<h2 id="List-Types"><a href="#List-Types" class="headerlink" title="List Types"></a>List Types</h2><h3 id="Ordered-Lists"><a href="#Ordered-Lists" class="headerlink" title="Ordered Lists"></a>Ordered Lists</h3><ol>
-<li>Item one<ol>
-<li>sub item one</li>
-<li>sub item two</li>
-<li>sub item three</li>
+        <h2 id="Struts"><a href="#Struts" class="headerlink" title="Struts"></a>Struts</h2><p>使用Struts开发Web应用程序可以分为4个步骤：</p>
+<ol>
+<li>搭建Struts开发环境，包括必须的jar文件，web.xml配置和创建struts-config.xml文件</li>
+<li>实现Views，主要是创建JSP文件</li>
+<li>实现Model，主要是创建和配置ActionForm类</li>
+<li>实现Controller，主要是创建和配置Action类</li>
 </ol>
-</li>
-<li>Item two</li>
-</ol>
-<h3 id="Unordered-Lists"><a href="#Unordered-Lists" class="headerlink" title="Unordered Lists"></a>Unordered Lists</h3><ul>
-<li>Item one</li>
-<li>Item two</li>
-<li>Item three</li>
+<hr>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><p>它是一个基于IOC和AOP的构架多层j2ee系统的框架，但它不强迫你必须在每一层中必须使用Spring，因为它模块化的很好，允许你根据自己的需要选择使用它的某一个模块；它实现了很优雅的MVC，对不同的数据访问技术提供了统一的接口，采用IOC使得可以很容易的实现bean的装配，提供了简洁的AOP并据此实现Transaction Management</p>
+<hr>
+<h2 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate"></a>Hibernate</h2><p>Hibernate是数据持久化的一种解决方案，同时也是对象关系映射模型(ORM)的一个典型代表。所谓的ORM，可以简单理解为java面向对象的模型和数据库的关系模型之间的桥梁。它向上隐藏了关系模型，使得开发者能够按照面向对象的思想来操作关系数据库的数据。</p>
+<hr>
+<h2 id="在web程序中整合Struts-Spring-Hibernate"><a href="#在web程序中整合Struts-Spring-Hibernate" class="headerlink" title="在web程序中整合Struts, Spring, Hibernate"></a>在web程序中整合Struts, Spring, Hibernate</h2><p>采用SSH组合开发web程序是java web开发领域的经典模式，在一个web应用程序中，三者各司其职。</p>
+<ul>
+<li>Struts：表现层，主要作用是接收请求和展现请求结果</li>
+<li>Spring：业务层，将Struts和Hibernate穿插在一起</li>
+<li>Hibernate: 数据层，提供对数据进行相关操作的接口和实现</li>
 </ul>
-<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">Header1</th>
-<th style="text-align:center">Header2</th>
-<th style="text-align:right">Header3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">cell1</td>
-<td style="text-align:center">cell2</td>
-<td style="text-align:right">cell3</td>
-</tr>
-<tr>
-<td style="text-align:left">cell4</td>
-<td style="text-align:center">cell5</td>
-<td style="text-align:right">cell6</td>
-</tr>
-<tr>
-<td style="text-align:left">—-</td>
-</tr>
-<tr>
-<td style="text-align:left">cell1</td>
-<td style="text-align:center">cell2</td>
-<td style="text-align:right">cell3</td>
-</tr>
-<tr>
-<td style="text-align:left">cell4</td>
-<td style="text-align:center">cell5</td>
-<td style="text-align:right">cell6</td>
-</tr>
-<tr>
-<td style="text-align:left">=====</td>
-</tr>
-<tr>
-<td style="text-align:left">Foot1</td>
-<td style="text-align:center">Foot2</td>
-<td style="text-align:right">Foot3</td>
-</tr>
-</tbody>
-</table>
+<p>整合三者有以下步骤：</p>
+<ol>
+<li>完成Struts配置，包括web.xml和struts-config.xml</li>
+<li>完成Hibernate配置文件hibernate.cfg.xml</li>
+<li>在web.xml为Spring配置应用程序上下文监听器</li>
+<li>用Spring提供的controller替换Struts原有的controller</li>
+<li>用Spring提供的SessionFactoryBean来读取hibernate.cfg.xml，完成Spring对Hibernate的整合</li>
+<li>保存必要的jar文件到”WEB-INF/lib”文件夹中</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/03/10/2014-03-10-sample-markdown-syntax/" data-id="ciz6sim560003tgqauvmmxjcf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/08/2016-06-08-javaweb-ssh/" data-id="ciz6yy0g4000vl4qa3zfine4r" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-06-08-design-model" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/08/2016-06-08-design-model/" class="article-date">
+  <time datetime="2016-06-08T09:08:41.000Z" itemprop="datePublished">2016-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/08/2016-06-08-design-model/">设计模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>聊聊设计模式</p>
+<hr>
+<h3 id="MVC设计模式-Model-View-Controller"><a href="#MVC设计模式-Model-View-Controller" class="headerlink" title="MVC设计模式(Model-View-Controller)"></a>MVC设计模式(Model-View-Controller)</h3><p>MVC设计模式的主要思想是把控制器，数据模型和视图分离，达到高内聚和低耦合的作用。</p>
+<p>以java web开发为例，有两种普遍的开发模式。模式一使用JSP+JavaBean技术将页面显示和业务逻辑分离，JSP显示页面，JavaBean处理数据和逻辑。模式二就是把处理逻辑的代码提取出来成为一个独立的角色，这个角色就是控制器，而存取数据的JavaBean就是数据模型，此时模型二就符合了MVC的设计模式。</p>
+<p>简而言之，不适用框架的情况下，可以使用以下步骤来实现MVC的设计模式：</p>
+<ol>
+<li>开发Model：主要是开发JavaBean，它的作用是数据的存取</li>
+<li>开发Views：主要是开发JSP，它的作用是从JavaBean中读取数据进行展示</li>
+<li>开发Controller：主要是开发Servlet，它的作用是根据请求的参数或者URL不同，转发相应的请求，一般还会进行数据的创建和填充</li>
+</ol>
+<p>使用MVC设计模式的代表例子有Struts框架。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/08/2016-06-08-design-model/" data-id="ciz6yy0g2000ul4qa4vba9m0z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-06-08-algorithm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/08/2016-06-08-algorithm/" class="article-date">
+  <time datetime="2016-06-08T09:08:41.000Z" itemprop="datePublished">2016-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/08/2016-06-08-algorithm/">算法大全</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><hr>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>选择法排序的思路： </p>
+<p>把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来，比较完后，第一位就是最小的<br>然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来，比较完后，第二位就是第二小的 </p>
+<p>以此类推</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class SelectSort &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;3, 9, 5, 13, 3, 7, 4&#125;;</div><div class="line">		selectSort(arr);</div><div class="line">	&#125;</div><div class="line">	public static void selectSort(int[] array) &#123;</div><div class="line">		for (int i = 0; i &lt; array.length-1; i++) &#123;</div><div class="line">			for (int j = i + 1; j &lt; array.length; j++) &#123;</div><div class="line">				if (array[j] &lt; array[i]) &#123;</div><div class="line">					int temp = array[i];</div><div class="line">					array[i] = array[j];</div><div class="line">					array[j] = temp;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h3><p>冒泡算法基本概念是：依次比较相邻的两个数，然后将小数放在前面，大数放在后面。相当于气泡逐渐往上升，所以形象的称为冒泡排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class BubbleSort &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;3, 9, 5, 13, 3, 7, 4 &#125;;</div><div class="line">		bubbleSort(arr);</div><div class="line">	&#125;</div><div class="line">	public static void bubbleSort(int[] array) &#123;</div><div class="line">		for (int i = 0; i &lt; array.length; i++) &#123;</div><div class="line">			for (int j = 0; j &lt; array.length - j - 1; j++) &#123;</div><div class="line">				if (array[j] &gt; array[j + 1]) &#123;</div><div class="line">					int temp = array[j];</div><div class="line">					array[j] = array[j + 1];</div><div class="line">					array[j + 1] = temp;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>插入排序类似于打扑克牌，每抓一张牌都要把它按照一定顺序插入到手中已有的牌中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class InsertSort &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;3, 9, 5, 13, 3, 7, 4&#125;;</div><div class="line">		insertSort(arr);</div><div class="line">	&#125;</div><div class="line">	public static void insertSort(int[] array) &#123;</div><div class="line">		for (int i = 1; i &lt; array.length; i++) &#123;</div><div class="line">			int temp = array[i];</div><div class="line">			for (int j = i; j &gt; 0; j--) &#123;</div><div class="line">				if (array[j - 1] &gt; temp) &#123;</div><div class="line">					array[j] = array[j - 1];</div><div class="line">				&#125; else &#123;</div><div class="line">					break;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			array[j] = temp;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序是排序算法中效率最高的一种。它利用递归原理，把数组无限制分割为两个部分，直到所有数据都排好位置。排序算法是对冒泡算法的一种改进。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">public class QuickSort &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">	 	int[] arr = &#123;3, 9, 5, 13, 3, 7, 4&#125;;</div><div class="line">	 	quickSort(arr, 0, arr.length-1);</div><div class="line">	&#125;</div><div class="line">	public static void quickSort(int[] array, int low, int high) &#123;</div><div class="line">		if (low &gt;= high) &#123;</div><div class="line">			return;</div><div class="line">		&#125;</div><div class="line">		if (high - low == 1) &#123;</div><div class="line">			if (array[0] &gt; array[1]) &#123;</div><div class="line">				swap(array, 0, 1);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		int pivot = array[low];</div><div class="line">		int left = low + 1;</div><div class="line">		int right = high;</div><div class="line">		while (left &lt; right) &#123;</div><div class="line">			while (left &lt; right &amp;&amp; left &lt;= high) &#123;</div><div class="line">				if (array[left] &gt; pivot) &#123;</div><div class="line">					break;</div><div class="line">				&#125;</div><div class="line">				left++;</div><div class="line">			&#125;</div><div class="line">			while (left &lt;= right &amp;&amp; right &gt; low) &#123;</div><div class="line">				if (array[right] &lt;= pivot) &#123;</div><div class="line">					break;</div><div class="line">				&#125;</div><div class="line">				right--;</div><div class="line">			&#125;</div><div class="line">			if (left &lt; right) &#123;</div><div class="line">				swap(array, right, left);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		swap(array, low, right);</div><div class="line">		quickSort(array, low, right);</div><div class="line">		quickSort(array, right + 1, high);</div><div class="line">	&#125;</div><div class="line">	public static void swap(int[] array, int i, int j) &#123;</div><div class="line">		int temp;</div><div class="line">		temp = array[i];</div><div class="line">		array[i] = array[j];</div><div class="line">		array[j] = temp;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/08/2016-06-08-algorithm/" data-id="ciz6yy0fy000rl4qafkka2kvs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-06-07-JDBC" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/07/2016-06-07-JDBC/" class="article-date">
+  <time datetime="2016-06-07T09:08:41.000Z" itemprop="datePublished">2016-06-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/07/2016-06-07-JDBC/">jdbc</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们来聊一聊JDBC，它是专门用来执行SQL的java API，为java程序员访问数据库而准备。各种数据库差异巨大，而JDBC隐藏了细节，提供了一种统一的方法来访问操作数据库。<br>JDBC由两部分构成，第一部分是供程序员调动的API，另一部分是需要数据库厂商实现的SPI，也叫做驱动程序。JDBC提供了一系列java接口给数据库厂商，让他们去实现这些接口。然后提供另一组通用接口给程序开发人员，通过这种方式实现了通过一组API来操作不同数据库。</p>
+<hr>
+<h3 id="JDBC操作数据库步骤"><a href="#JDBC操作数据库步骤" class="headerlink" title="JDBC操作数据库步骤"></a>JDBC操作数据库步骤</h3><ol>
+<li>Class.forName(“class name of driver”);  // register the database driver</li>
+<li>Coonnection conn = DriverManager.getConnection(“URL”, “usrename”, “password”);  // get a database connection</li>
+<li>Statement stmt = conn.createStatement();  // create a new statement</li>
+<li>stmt.executeUpdate(“sql cmd of INSERT/UPDATE/DELETE”);  // execute sql </li>
+<li>ResultSet rs = stmt.executeQuery(“sql cmd of SELECT”);  // get a result set</li>
+<li>while (rs.next()) { do something to set }    // do operation to set</li>
+<li>rs.close();  stmt.close();   conn.close();   // close the connection</li>
+</ol>
+<p>可以看出，连接数据库的操作步骤是比较固定的。其中第六步对结果集的处理是可选的，另外第七步关闭数据库连接很重要，是一个良好的编程习惯。</p>
+<h3 id="JDBC-事务"><a href="#JDBC-事务" class="headerlink" title="JDBC 事务"></a>JDBC 事务</h3><p>假设一个银行转账的程序，在某一次转账中，出现了一些问题，造成一方已经扣款，而另一方并没有存入相应的金额。这样的错误是毁灭性的，为了避免这样的错误发生，我们需要使用事务。事务其实并不复杂，而且JDBC对它提供了充分的支持。</p>
+<p>一个事务的结束只能有两种形式，提交和回滚。操作成功则提交，产生永久性的修改。操作不成功则回滚，恢复到事务开始前的状态。只有如此才能从根本上避免上述错误的发生。</p>
+<p>那么JDBC中如何使用事务呢？默认情况下，JCBC自动提交事务，也就是说，执行SQL的语句完成后，就立刻提交事务。但是多数情况下，我们不希望马上提交，而是自主控制，这样在发生了异常或者参数出现问题后，能够回滚事务。以下是一个典型的使用JDBC事务过程。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Connection conn = DriverManager.getConnection(&quot;URL&quot;, &quot;username&quot;, &quot;password&quot;);</div><div class="line">try &#123;</div><div class="line">	conn.setAutoCommit(false);</div><div class="line">	Statement stmt = conn.createStatement();</div><div class="line">	stmt.executeUpdate(&quot;sql cmd&quot;);</div><div class="line">	conn.commit();</div><div class="line">&#125; catch(Exception e) &#123;</div><div class="line">	e.printStackTrace();</div><div class="line">	conn.rollback();</div><div class="line">&#125; finally &#123;</div><div class="line">	stmt.close();</div><div class="line">	conn.close();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>下面介绍如何用JDBC操作各种不同的数据库</p>
+<h3 id="JDBC操作Oracle数据库"><a href="#JDBC操作Oracle数据库" class="headerlink" title="JDBC操作Oracle数据库"></a>JDBC操作Oracle数据库</h3><h3 id="JDBC操作MySQL数据库"><a href="#JDBC操作MySQL数据库" class="headerlink" title="JDBC操作MySQL数据库"></a>JDBC操作MySQL数据库</h3><h3 id="JDBC操作SQL-Server数据库"><a href="#JDBC操作SQL-Server数据库" class="headerlink" title="JDBC操作SQL Server数据库"></a>JDBC操作SQL Server数据库</h3><h3 id="JDBC操作Access"><a href="#JDBC操作Access" class="headerlink" title="JDBC操作Access"></a>JDBC操作Access</h3><h3 id="JDBC操作Excel"><a href="#JDBC操作Excel" class="headerlink" title="JDBC操作Excel"></a>JDBC操作Excel</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/07/2016-06-07-JDBC/" data-id="ciz6yy0fj000jl4qavtimhon4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdbc/">jdbc</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-06-02-gitignore" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/02/2016-06-02-gitignore/" class="article-date">
+  <time datetime="2016-06-02T09:08:41.000Z" itemprop="datePublished">2016-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/02/2016-06-02-gitignore/">使用gitignore忽略文件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="gitignore介绍"><a href="#gitignore介绍" class="headerlink" title="gitignore介绍"></a>gitignore介绍</h2><p>在工程实现过程中，会生成一些中间文件，或者在项目中的部分文件是不需要进行版本管理的。如何忽略这些文件呢？Github提供这种功能，可以自己指定哪些文件可以不被管理。具体方法是在版本管理的根目录下（与.Git文件夹同级）创建一个<code>.gitignore</code>文件，在<code>.gitignore</code>中具体指出不需要进行版本管理的文件就可以了。</p>
+<h2 id="文件-gitignore的格式规范："><a href="#文件-gitignore的格式规范：" class="headerlink" title="文件.gitignore的格式规范："></a>文件<code>.gitignore</code>的格式规范：</h2><ul>
+<li>#为注释   </li>
+<li>可以使用shell所使用的正则表达式来进行模式匹配   </li>
+<li>匹配模式最后跟”/“说明要忽略的是目录 </li>
+<li>使用！取反（例如目录中包含<code>test.a</code>，并且gitignore文件中包含 *.[oa]，如果在文件中加入 ！test.a   表明忽略除test.a文件以外的后缀名为.a或者.o的文件）</li>
+</ul>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ul>
+<li>以“/”为开头表示目录</li>
+<li>以“？”为开头通配单个字符</li>
+<li>以“*”开头通配多个字符</li>
+<li>以“[]”表示包含单个字符的匹配列表</li>
+</ul>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>*.[oa]  // 忽略所有以O或者a为后缀的文件</p>
+<p>.gitignore  // 忽略gitignore文件本身</p>
+<p>main   // 显式指定，忽略名称为main的文件</p>
+<p>.metadata/*  // 忽略所有.metadata文件夹的内容</p>
+<p>/.metadata/*  // 忽略根目录下.metadata文件夹的内容</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>gitignore的匹配按照从上到下的顺序，也就是说前面的语句优先级更高</li>
+</ul>
+<hr>
+<p>配置完gitignore文件后，执行<code>git status</code>命令，发现gitignore中的文件都不再被跟踪，也就实现了我们的目的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/02/2016-06-02-gitignore/" data-id="ciz6yy0fs000pl4qaj4pb2tre" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-06-02-java-socket" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/02/2016-06-02-java-socket/" class="article-date">
+  <time datetime="2016-06-02T09:08:41.000Z" itemprop="datePublished">2016-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/02/2016-06-02-java-socket/">java socket</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是socket？"><a href="#什么是socket？" class="headerlink" title="什么是socket？"></a>什么是socket？</h2><p>socket通常也称作”套接字”，用于描述IP地址和端口。应用程序通常通过socket向网络发出请求或者应答网络请求。客户端和服务器端各有一个socket，我们可以将其简单理解为一扇门，各种数据从这扇门里通过。假若有一个数据包要从客户端发送到服务器，那么这个数据包会从客户端的门里出来，经过网络链路，到达服务器门口，通过这扇门到达服务器内部，再处理数据包中的数据。</p>
+<h3 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h3><p>java.net.Socket继承于java.lang.Object，有八个构造器，但是方法并不多，常用的有如下几个：</p>
+<ul>
+<li><p><em>Accept()</em>方法可以产生”阻塞”，使程序停留此处，直到接受到一个连接，并且返回一个客户端的Socket对象实例，通常”阻塞”放在死循环中。</p>
+</li>
+<li><p><em>getInputStream()</em>方法获得网络连接输入，同时返回一个IutputStream对象实例。 </p>
+</li>
+<li><p><em>getOutputStream()</em>方法连接的另一端将得到输入，同时返回一个OutputStream对象实例。</p>
+</li>
+</ul>
+<hr>
+<h2 id="java网络编程"><a href="#java网络编程" class="headerlink" title="java网络编程"></a>java网络编程</h2><p>网络编程最常见的是client-server模型，过程可以概括为：</p>
+<ul>
+<li>One program, called the server blocks waiting for a client to connect to it</li>
+<li>A client connects</li>
+<li>The server and the client exchange information until they’re done</li>
+<li>The client and the server both close their connection</li>
+</ul>
+<h2 id="使用socket开发聊天程序"><a href="#使用socket开发聊天程序" class="headerlink" title="使用socket开发聊天程序"></a>使用socket开发聊天程序</h2><h3 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h3><p>服务器端的ServerSocket监听端口，直到接收到一个Socket,再通过输入流取得socket的内容，并对其进行操作。最后记得关闭流和socket。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">import java.net.*;</div><div class="line">import java.io.*;</div><div class="line">public class Server	&#123;</div><div class="line">	private ServerSocket server;</div><div class="line">	private Socket socket;</div><div class="line">	private BufferedReader reader;</div><div class="line"></div><div class="line">	public Server() &#123;</div><div class="line">		try &#123;   </div><div class="line">            server = new ServerSocket(1300);</div><div class="line">            System.out.println(&quot;Server started, listening 1300&quot;);</div><div class="line">            while (true) &#123;</div><div class="line">                socket = server.accept();  // get a socket from client</div><div class="line">                System.out.println(&quot;accepted new socket&quot; + socket);</div><div class="line">                /* receive message from client*/</div><div class="line">                reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));  // transfer socket to reader</div><div class="line">                String received = reader.readLine();  // get message in socket</div><div class="line">                System.out.println(&quot;received message is &quot; + received);</div><div class="line">                /* send message to client */</div><div class="line">                writer = new PrintWriter(socket.getOutputStream(),true);</div><div class="line">                writer.println(&quot;hello&quot;);</div><div class="line">                reader.close();</div><div class="line">                writer.close();</div><div class="line">            &#125;</div><div class="line">		&#125; catch (IOException e) &#123;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		new Server();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个服务器程序只能接收一个客户端连接，如果想要接收多个连接怎么办？很简单，只需要在accept到一个socket之后，新建一个线程，在新线程中进行io操作就可以了。</p>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">import java.io.*;</div><div class="line">import java.net.*;</div><div class="line">public class Client &#123;</div><div class="line">	Socket socket;</div><div class="line">	BufferedReader reader;</div><div class="line">	PrintWriter writer;</div><div class="line">	public Client() &#123;</div><div class="line">		try &#123;</div><div class="line">			socket = new Socket(&quot;127.0.0.1&quot;, 10000);</div><div class="line">			writer = new PrintWriter(socket.getOutputStream(),true);</div><div class="line">			reader = new BufferedReader(new InputStreamReader(System.in));</div><div class="line">			writer.println(reader.readLine());</div><div class="line">			reader.close();</div><div class="line">			writer.close();</div><div class="line">			socket.close();</div><div class="line">		&#125;</div><div class="line">		catch (IOException e) &#123;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		new Client();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/02/2016-06-02-java-socket/" data-id="ciz6yy0fe000hl4qak4sue4yw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/socket/">socket</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-05-11-learn-linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/11/2016-05-11-learn-linux/" class="article-date">
+  <time datetime="2016-05-11T09:08:41.000Z" itemprop="datePublished">2016-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/11/2016-05-11-learn-linux/">linux学习指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>为了系统地学习一下linux相关知识，我花了三天的时间看完了那本经典的<strong>《鸟哥的linux私房菜》</strong>。所谓的经典必然是有其过人之处，而看完这本书之后，我毫无疑问地加入了强烈推荐这本书的行列。</p>
+<p>其实，要全面了解linux系统，你必须要学习（至少了解）以下这些内容：</p>
+<ol>
+<li><p><strong>计算机硬件系统</strong>：其中最主要了解的是硬盘，毕竟要安装linux需要对硬盘进行分区等各种操作。</p>
+</li>
+<li><p><strong>文件系统</strong>：文件系统是文件在硬盘上的存储方式。</p>
+</li>
+<li><p><strong>目录树</strong>：linux系统下所有文件均由根目录衍生出来，因此形成树状结构，这和windows系统是一个明显的区别。关于文件系统是如何挂载到目录树上的，这也是一个不容忽视的概念。</p>
+</li>
+<li><p><strong>终端/壳程序</strong>：很多人搞不清这个terminal和shell究竟有什么区别。这两者确实比较容易混淆，前者是在全文本模式下的界面，而后者是在窗口模式下调出来的一个程序，和windows系统下的cmd程序类似。进入terminal可以按<code>Ctrl+Alt+F1~6</code>,总共有6个terminal可以使用。而按<code>Ctrl+Alt+F7</code>可以进入窗口模式，然后按<code>Ctrl+Alt+t</code>调出shell程序。</p>
+</li>
+<li><p><strong>命令</strong>：使用linux自然要知道命令啦，虽然说桌面使用的话其实不怎么用得到命令，但是几个常用的命令还是要了解一下的。</p>
+</li>
+<li><p><strong>shell script</strong>：和windows下的批处理程序.bat类似，主要用途是一次性执行多命令。</p>
+</li>
+<li><p><strong>权限管理</strong>：linux系统最重要的就是权限管理，这也是它区别于其他系统的一大特色。由于它是一个多人多任务的系统，且主要用于服务器端，各种权限的管理就是系统安全性的保证，所以学习linux一定要把握好权限这一关。</p>
+</li>
+<li><p><strong>vim</strong>：linux下最重要的编辑器自然是vim了，虽然大家都把这玩意儿看的很难，但是多上手使用几次之后发现其实也就是多了几个命令而已。至于为什么一定要学好vim呢？最主要的原因是很多软件或者程序会默认调用vi，而vim 又是vi的升级版。不会这玩意儿，到时候会多很多麻烦。</p>
+</li>
+<li><p><strong>正则表达式</strong>：嘿嘿，想必大家都早有耳闻了，大名鼎鼎的regular express。这玩意儿也是一些特殊符号多了些，本身并不难，多练练多记记就好。</p>
+</li>
+<li><p><strong>帐号管理</strong>：多人多任务嘛，不同的人自然有不同的帐号了，那么这个帐号的管理也是相当重要了。这里的帐号管理应当与权限管理结合起来。</p>
+</li>
+<li><p><strong>例行任务</strong>：就是计划任务啦，分为一次性任务和周期性任务两种。</p>
+</li>
+<li><p><strong>程序管理</strong></p>
+</li>
+<li><p><strong>系统服务</strong></p>
+</li>
+<li><p><strong>登录档</strong>：要维护linux系统，必须学会查看登录档。因为登录档里面记录了系统运行的各种日志文档，当系统由于各种原因出现故障的时候，就需要自己打开登录档查看上次出现问题的原因了。</p>
+</li>
+<li><p><strong>开机流程</strong>：详细地了解开机流程是非常有必要的，能够加深对系统运作的了解。</p>
+</li>
+<li><p><strong>软件安装</strong>：对于桌面系统用户来说，软件安装才是最主要的问题。</p>
+</li>
+<li><p><strong>核心编译</strong>：所有的发行版的核心都是一样的，在什么情况下需要自己编译linux核心呢。当你需要在嵌入式设备中安装linux系统时，由于大小的限制，就需要自行对核心进行精简。</p>
+</li>
+</ol>
+<ul>
+<li><strong>我个人认为，要深入了解linux，自行查看系统里的各种文档是最重要的，没事就打开这些文档看看里面提供的各种功能，说明，帮助。这些文档简直就是最好的教科书。</strong></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/11/2016-05-11-learn-linux/" data-id="ciz6yy0fb000fl4qaruxcfjn7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-04-23-problems-using-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/23/2016-04-23-problems-using-ubuntu/" class="article-date">
+  <time datetime="2016-04-23T09:08:41.000Z" itemprop="datePublished">2016-04-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/23/2016-04-23-problems-using-ubuntu/">安装使用ubuntu问题汇总</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>很早以前就安装了ubuntu系统，可是一直没怎么用，也没有深入研究。这两天重装了一下windows，顺带着也重新装了一遍最新的ubuntu。期间碰到了不少问题，一个个解决也花费了不少时间。所以把这些问题都汇总在这里，以后再碰到方便查询，以后在使用ubuntu的过程中遇到的更多问题和解决办法，我也会添加在这里。</p>
+<p>一：安装windows和ubuntu双系统</p>
+<p>参考我的这篇文章<a href="http://charleyking.github.io/blog/install-ubuntu-on-windows/" target="_blank" rel="external">win7下硬盘安装ubuntu双系统</a></p>
+<p>二：ubuntu系统鼠标闪烁问题</p>
+<p>很多人安装好ubuntu后使用时会发现鼠标会不停闪烁，感觉异常难受。其实这不是系统安装出了问题，只是没有设置好。解决办法很简单，打开系统设置，点击“显示”，你会发现显示面板上方有一个内置显示器和一个未知显示器。其实就是这个未知显示器在捣乱，我们只要将其关闭就好了。点击“未知显示器”，在下方的选项中将其关闭。OK，问题解决。</p>
+<p>三：ubuntu网络连接问题</p>
+<p>在网络连接里面有很多设置项，分为“有线”，“无线”，“移动宽带”，“vpn” ，“DSL”。注意家里的宽带是在DSL里输入账号密码，不要选择“有线”或“移动宽带”。</p>
+<p>四：grub里面不能选择windows进入</p>
+<p>切换双系统的时候，在grub菜单选择windows，发现过几秒钟直接返回grub选择菜单，无法进入windows。这个比较郁闷了，我回想了一下问题可能出现在哪里，随后想起来在安装ubuntu分区这一步时，bootloader这个选项我不是用默认设置的而是将其改成了windows的sda1那个分区，问题应当出在这里。在网上查找了一番，果然如此。解决办法是很简单，背后的原理稍微有点费脑。参考这个链接<a href="http://forum.ubuntu.org.cn/viewtopic.php?f=77&amp;t=462922" target="_blank" rel="external">安装Ubuntu后Windows 7无法启动问题分析</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/23/2016-04-23-problems-using-ubuntu/" data-id="ciz6yy0f8000dl4qa6uqjdrer" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
 
     </footer>
   </div>
@@ -559,6 +625,10 @@
 
   
 
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -570,7 +640,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdbc/">jdbc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
     </div>
   </div>
 
@@ -580,7 +650,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/windows/" style="font-size: 20px;">windows</a>
+      <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/jdbc/" style="font-size: 10px;">jdbc</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
     </div>
   </div>
 
@@ -589,7 +659,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a></li></ul>
     </div>
   </div>
 
@@ -602,23 +672,23 @@
       <ul>
         
           <li>
-            <a href="/2017/02/15/afternoon/">afternoon</a>
-          </li>
-        
-          <li>
             <a href="/2017/02/14/hello-world/">Hello World</a>
           </li>
         
           <li>
-            <a href="/2015/11/12/2015-11-12-windows-advance/">windows 快捷操作高级篇</a>
+            <a href="/2016/10/27/2016-10-27-rewrite-arraylist/">重写ArryList类</a>
           </li>
         
           <li>
-            <a href="/2015/11/11/2015-11-11-windows-medium/">windows 快捷操作进阶篇</a>
+            <a href="/2016/06/08/2016-06-08-javaweb-ssh/">javaEE 三大框架介绍</a>
           </li>
         
           <li>
-            <a href="/2015/11/03/2015-11-3-windows-basic/">windows 快捷操作基础篇</a>
+            <a href="/2016/06/08/2016-06-08-design-model/">设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-algorithm/">算法大全</a>
           </li>
         
       </ul>

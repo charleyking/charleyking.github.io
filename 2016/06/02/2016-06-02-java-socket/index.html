@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>java socket | Charley kingdom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="什么是socket？socket通常也称作”套接字”，用于描述IP地址和端口。应用程序通常通过socket向网络发出请求或者应答网络请求。客户端和服务器端各有一个socket，我们可以将其简单理解为一扇门，各种数据从这扇门里通过。假若有一个数据包要从客户端发送到服务器，那么这个数据包会从客户端的门里出来，经过网络链路，到达服务器门口，通过这扇门到达服务器内部，再处理数据包中的数据。
+常用APIja">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java socket">
+<meta property="og:url" content="http://yoursite.com/2016/06/02/2016-06-02-java-socket/index.html">
+<meta property="og:site_name" content="Charley kingdom">
+<meta property="og:description" content="什么是socket？socket通常也称作”套接字”，用于描述IP地址和端口。应用程序通常通过socket向网络发出请求或者应答网络请求。客户端和服务器端各有一个socket，我们可以将其简单理解为一扇门，各种数据从这扇门里通过。假若有一个数据包要从客户端发送到服务器，那么这个数据包会从客户端的门里出来，经过网络链路，到达服务器门口，通过这扇门到达服务器内部，再处理数据包中的数据。
+常用APIja">
+<meta property="og:updated_time" content="2017-02-15T12:58:48.732Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java socket">
+<meta name="twitter:description" content="什么是socket？socket通常也称作”套接字”，用于描述IP地址和端口。应用程序通常通过socket向网络发出请求或者应答网络请求。客户端和服务器端各有一个socket，我们可以将其简单理解为一扇门，各种数据从这扇门里通过。假若有一个数据包要从客户端发送到服务器，那么这个数据包会从客户端的门里出来，经过网络链路，到达服务器门口，通过这扇门到达服务器内部，再处理数据包中的数据。
+常用APIja">
+  
+    <link rel="alternate" href="/atom.xml" title="Charley kingdom" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Charley kingdom</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">My thought</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-06-02-java-socket" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/02/2016-06-02-java-socket/" class="article-date">
+  <time datetime="2016-06-02T09:08:41.000Z" itemprop="datePublished">2016-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java socket
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是socket？"><a href="#什么是socket？" class="headerlink" title="什么是socket？"></a>什么是socket？</h2><p>socket通常也称作”套接字”，用于描述IP地址和端口。应用程序通常通过socket向网络发出请求或者应答网络请求。客户端和服务器端各有一个socket，我们可以将其简单理解为一扇门，各种数据从这扇门里通过。假若有一个数据包要从客户端发送到服务器，那么这个数据包会从客户端的门里出来，经过网络链路，到达服务器门口，通过这扇门到达服务器内部，再处理数据包中的数据。</p>
+<h3 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h3><p>java.net.Socket继承于java.lang.Object，有八个构造器，但是方法并不多，常用的有如下几个：</p>
+<ul>
+<li><p><em>Accept()</em>方法可以产生”阻塞”，使程序停留此处，直到接受到一个连接，并且返回一个客户端的Socket对象实例，通常”阻塞”放在死循环中。</p>
+</li>
+<li><p><em>getInputStream()</em>方法获得网络连接输入，同时返回一个IutputStream对象实例。 </p>
+</li>
+<li><p><em>getOutputStream()</em>方法连接的另一端将得到输入，同时返回一个OutputStream对象实例。</p>
+</li>
+</ul>
+<hr>
+<h2 id="java网络编程"><a href="#java网络编程" class="headerlink" title="java网络编程"></a>java网络编程</h2><p>网络编程最常见的是client-server模型，过程可以概括为：</p>
+<ul>
+<li>One program, called the server blocks waiting for a client to connect to it</li>
+<li>A client connects</li>
+<li>The server and the client exchange information until they’re done</li>
+<li>The client and the server both close their connection</li>
+</ul>
+<h2 id="使用socket开发聊天程序"><a href="#使用socket开发聊天程序" class="headerlink" title="使用socket开发聊天程序"></a>使用socket开发聊天程序</h2><h3 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h3><p>服务器端的ServerSocket监听端口，直到接收到一个Socket,再通过输入流取得socket的内容，并对其进行操作。最后记得关闭流和socket。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">import java.net.*;</div><div class="line">import java.io.*;</div><div class="line">public class Server	&#123;</div><div class="line">	private ServerSocket server;</div><div class="line">	private Socket socket;</div><div class="line">	private BufferedReader reader;</div><div class="line"></div><div class="line">	public Server() &#123;</div><div class="line">		try &#123;   </div><div class="line">            server = new ServerSocket(1300);</div><div class="line">            System.out.println(&quot;Server started, listening 1300&quot;);</div><div class="line">            while (true) &#123;</div><div class="line">                socket = server.accept();  // get a socket from client</div><div class="line">                System.out.println(&quot;accepted new socket&quot; + socket);</div><div class="line">                /* receive message from client*/</div><div class="line">                reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));  // transfer socket to reader</div><div class="line">                String received = reader.readLine();  // get message in socket</div><div class="line">                System.out.println(&quot;received message is &quot; + received);</div><div class="line">                /* send message to client */</div><div class="line">                writer = new PrintWriter(socket.getOutputStream(),true);</div><div class="line">                writer.println(&quot;hello&quot;);</div><div class="line">                reader.close();</div><div class="line">                writer.close();</div><div class="line">            &#125;</div><div class="line">		&#125; catch (IOException e) &#123;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		new Server();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个服务器程序只能接收一个客户端连接，如果想要接收多个连接怎么办？很简单，只需要在accept到一个socket之后，新建一个线程，在新线程中进行io操作就可以了。</p>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">import java.io.*;</div><div class="line">import java.net.*;</div><div class="line">public class Client &#123;</div><div class="line">	Socket socket;</div><div class="line">	BufferedReader reader;</div><div class="line">	PrintWriter writer;</div><div class="line">	public Client() &#123;</div><div class="line">		try &#123;</div><div class="line">			socket = new Socket(&quot;127.0.0.1&quot;, 10000);</div><div class="line">			writer = new PrintWriter(socket.getOutputStream(),true);</div><div class="line">			reader = new BufferedReader(new InputStreamReader(System.in));</div><div class="line">			writer.println(reader.readLine());</div><div class="line">			reader.close();</div><div class="line">			writer.close();</div><div class="line">			socket.close();</div><div class="line">		&#125;</div><div class="line">		catch (IOException e) &#123;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		new Client();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/02/2016-06-02-java-socket/" data-id="ciz6yy0fe000hl4qak4sue4yw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/socket/">socket</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/02/2016-06-02-gitignore/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          使用gitignore忽略文件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/11/2016-05-11-learn-linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">linux学习指南</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdbc/">jdbc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/jdbc/" style="font-size: 10px;">jdbc</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/14/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/27/2016-10-27-rewrite-arraylist/">重写ArryList类</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-javaweb-ssh/">javaEE 三大框架介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-design-model/">设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-algorithm/">算法大全</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Charles Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

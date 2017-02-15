@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>linux学习指南 | Charley kingdom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="为了系统地学习一下linux相关知识，我花了三天的时间看完了那本经典的《鸟哥的linux私房菜》。所谓的经典必然是有其过人之处，而看完这本书之后，我毫无疑问地加入了强烈推荐这本书的行列。
+其实，要全面了解linux系统，你必须要学习（至少了解）以下这些内容：
+
+计算机硬件系统：其中最主要了解的是硬盘，毕竟要安装linux需要对硬盘进行分区等各种操作。
+
+文件系统：文件系统是文件在硬盘上的存储方式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux学习指南">
+<meta property="og:url" content="http://yoursite.com/2016/05/11/2016-05-11-learn-linux/index.html">
+<meta property="og:site_name" content="Charley kingdom">
+<meta property="og:description" content="为了系统地学习一下linux相关知识，我花了三天的时间看完了那本经典的《鸟哥的linux私房菜》。所谓的经典必然是有其过人之处，而看完这本书之后，我毫无疑问地加入了强烈推荐这本书的行列。
+其实，要全面了解linux系统，你必须要学习（至少了解）以下这些内容：
+
+计算机硬件系统：其中最主要了解的是硬盘，毕竟要安装linux需要对硬盘进行分区等各种操作。
+
+文件系统：文件系统是文件在硬盘上的存储方式。">
+<meta property="og:updated_time" content="2017-02-15T12:56:59.598Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux学习指南">
+<meta name="twitter:description" content="为了系统地学习一下linux相关知识，我花了三天的时间看完了那本经典的《鸟哥的linux私房菜》。所谓的经典必然是有其过人之处，而看完这本书之后，我毫无疑问地加入了强烈推荐这本书的行列。
+其实，要全面了解linux系统，你必须要学习（至少了解）以下这些内容：
+
+计算机硬件系统：其中最主要了解的是硬盘，毕竟要安装linux需要对硬盘进行分区等各种操作。
+
+文件系统：文件系统是文件在硬盘上的存储方式。">
+  
+    <link rel="alternate" href="/atom.xml" title="Charley kingdom" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Charley kingdom</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">My thought</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-05-11-learn-linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/11/2016-05-11-learn-linux/" class="article-date">
+  <time datetime="2016-05-11T09:08:41.000Z" itemprop="datePublished">2016-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux学习指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>为了系统地学习一下linux相关知识，我花了三天的时间看完了那本经典的<strong>《鸟哥的linux私房菜》</strong>。所谓的经典必然是有其过人之处，而看完这本书之后，我毫无疑问地加入了强烈推荐这本书的行列。</p>
+<p>其实，要全面了解linux系统，你必须要学习（至少了解）以下这些内容：</p>
+<ol>
+<li><p><strong>计算机硬件系统</strong>：其中最主要了解的是硬盘，毕竟要安装linux需要对硬盘进行分区等各种操作。</p>
+</li>
+<li><p><strong>文件系统</strong>：文件系统是文件在硬盘上的存储方式。</p>
+</li>
+<li><p><strong>目录树</strong>：linux系统下所有文件均由根目录衍生出来，因此形成树状结构，这和windows系统是一个明显的区别。关于文件系统是如何挂载到目录树上的，这也是一个不容忽视的概念。</p>
+</li>
+<li><p><strong>终端/壳程序</strong>：很多人搞不清这个terminal和shell究竟有什么区别。这两者确实比较容易混淆，前者是在全文本模式下的界面，而后者是在窗口模式下调出来的一个程序，和windows系统下的cmd程序类似。进入terminal可以按<code>Ctrl+Alt+F1~6</code>,总共有6个terminal可以使用。而按<code>Ctrl+Alt+F7</code>可以进入窗口模式，然后按<code>Ctrl+Alt+t</code>调出shell程序。</p>
+</li>
+<li><p><strong>命令</strong>：使用linux自然要知道命令啦，虽然说桌面使用的话其实不怎么用得到命令，但是几个常用的命令还是要了解一下的。</p>
+</li>
+<li><p><strong>shell script</strong>：和windows下的批处理程序.bat类似，主要用途是一次性执行多命令。</p>
+</li>
+<li><p><strong>权限管理</strong>：linux系统最重要的就是权限管理，这也是它区别于其他系统的一大特色。由于它是一个多人多任务的系统，且主要用于服务器端，各种权限的管理就是系统安全性的保证，所以学习linux一定要把握好权限这一关。</p>
+</li>
+<li><p><strong>vim</strong>：linux下最重要的编辑器自然是vim了，虽然大家都把这玩意儿看的很难，但是多上手使用几次之后发现其实也就是多了几个命令而已。至于为什么一定要学好vim呢？最主要的原因是很多软件或者程序会默认调用vi，而vim 又是vi的升级版。不会这玩意儿，到时候会多很多麻烦。</p>
+</li>
+<li><p><strong>正则表达式</strong>：嘿嘿，想必大家都早有耳闻了，大名鼎鼎的regular express。这玩意儿也是一些特殊符号多了些，本身并不难，多练练多记记就好。</p>
+</li>
+<li><p><strong>帐号管理</strong>：多人多任务嘛，不同的人自然有不同的帐号了，那么这个帐号的管理也是相当重要了。这里的帐号管理应当与权限管理结合起来。</p>
+</li>
+<li><p><strong>例行任务</strong>：就是计划任务啦，分为一次性任务和周期性任务两种。</p>
+</li>
+<li><p><strong>程序管理</strong></p>
+</li>
+<li><p><strong>系统服务</strong></p>
+</li>
+<li><p><strong>登录档</strong>：要维护linux系统，必须学会查看登录档。因为登录档里面记录了系统运行的各种日志文档，当系统由于各种原因出现故障的时候，就需要自己打开登录档查看上次出现问题的原因了。</p>
+</li>
+<li><p><strong>开机流程</strong>：详细地了解开机流程是非常有必要的，能够加深对系统运作的了解。</p>
+</li>
+<li><p><strong>软件安装</strong>：对于桌面系统用户来说，软件安装才是最主要的问题。</p>
+</li>
+<li><p><strong>核心编译</strong>：所有的发行版的核心都是一样的，在什么情况下需要自己编译linux核心呢。当你需要在嵌入式设备中安装linux系统时，由于大小的限制，就需要自行对核心进行精简。</p>
+</li>
+</ol>
+<ul>
+<li><strong>我个人认为，要深入了解linux，自行查看系统里的各种文档是最重要的，没事就打开这些文档看看里面提供的各种功能，说明，帮助。这些文档简直就是最好的教科书。</strong></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/11/2016-05-11-learn-linux/" data-id="ciz6yy0fb000fl4qaruxcfjn7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/02/2016-06-02-java-socket/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          java socket
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/23/2016-04-23-problems-using-ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">安装使用ubuntu问题汇总</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdbc/">jdbc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/jdbc/" style="font-size: 10px;">jdbc</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/14/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/27/2016-10-27-rewrite-arraylist/">重写ArryList类</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-javaweb-ssh/">javaEE 三大框架介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-design-model/">设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-algorithm/">算法大全</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Charles Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>算法大全 | Charley kingdom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="排序算法
+选择排序选择法排序的思路： 
+把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来，比较完后，第一位就是最小的然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来，比较完后，第二位就是第二小的 
+以此类推
+1234567891011121314151617public class SelectSort &amp;#123;	public static void">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法大全">
+<meta property="og:url" content="http://yoursite.com/2016/06/08/2016-06-08-algorithm/index.html">
+<meta property="og:site_name" content="Charley kingdom">
+<meta property="og:description" content="排序算法
+选择排序选择法排序的思路： 
+把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来，比较完后，第一位就是最小的然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来，比较完后，第二位就是第二小的 
+以此类推
+1234567891011121314151617public class SelectSort &amp;#123;	public static void">
+<meta property="og:updated_time" content="2017-02-15T13:00:31.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法大全">
+<meta name="twitter:description" content="排序算法
+选择排序选择法排序的思路： 
+把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来，比较完后，第一位就是最小的然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来，比较完后，第二位就是第二小的 
+以此类推
+1234567891011121314151617public class SelectSort &amp;#123;	public static void">
+  
+    <link rel="alternate" href="/atom.xml" title="Charley kingdom" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Charley kingdom</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">My thought</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-06-08-algorithm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/08/2016-06-08-algorithm/" class="article-date">
+  <time datetime="2016-06-08T09:08:41.000Z" itemprop="datePublished">2016-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      算法大全
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><hr>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>选择法排序的思路： </p>
+<p>把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来，比较完后，第一位就是最小的<br>然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来，比较完后，第二位就是第二小的 </p>
+<p>以此类推</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class SelectSort &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;3, 9, 5, 13, 3, 7, 4&#125;;</div><div class="line">		selectSort(arr);</div><div class="line">	&#125;</div><div class="line">	public static void selectSort(int[] array) &#123;</div><div class="line">		for (int i = 0; i &lt; array.length-1; i++) &#123;</div><div class="line">			for (int j = i + 1; j &lt; array.length; j++) &#123;</div><div class="line">				if (array[j] &lt; array[i]) &#123;</div><div class="line">					int temp = array[i];</div><div class="line">					array[i] = array[j];</div><div class="line">					array[j] = temp;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h3><p>冒泡算法基本概念是：依次比较相邻的两个数，然后将小数放在前面，大数放在后面。相当于气泡逐渐往上升，所以形象的称为冒泡排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class BubbleSort &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;3, 9, 5, 13, 3, 7, 4 &#125;;</div><div class="line">		bubbleSort(arr);</div><div class="line">	&#125;</div><div class="line">	public static void bubbleSort(int[] array) &#123;</div><div class="line">		for (int i = 0; i &lt; array.length; i++) &#123;</div><div class="line">			for (int j = 0; j &lt; array.length - j - 1; j++) &#123;</div><div class="line">				if (array[j] &gt; array[j + 1]) &#123;</div><div class="line">					int temp = array[j];</div><div class="line">					array[j] = array[j + 1];</div><div class="line">					array[j + 1] = temp;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>插入排序类似于打扑克牌，每抓一张牌都要把它按照一定顺序插入到手中已有的牌中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class InsertSort &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;3, 9, 5, 13, 3, 7, 4&#125;;</div><div class="line">		insertSort(arr);</div><div class="line">	&#125;</div><div class="line">	public static void insertSort(int[] array) &#123;</div><div class="line">		for (int i = 1; i &lt; array.length; i++) &#123;</div><div class="line">			int temp = array[i];</div><div class="line">			for (int j = i; j &gt; 0; j--) &#123;</div><div class="line">				if (array[j - 1] &gt; temp) &#123;</div><div class="line">					array[j] = array[j - 1];</div><div class="line">				&#125; else &#123;</div><div class="line">					break;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			array[j] = temp;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序是排序算法中效率最高的一种。它利用递归原理，把数组无限制分割为两个部分，直到所有数据都排好位置。排序算法是对冒泡算法的一种改进。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">public class QuickSort &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">	 	int[] arr = &#123;3, 9, 5, 13, 3, 7, 4&#125;;</div><div class="line">	 	quickSort(arr, 0, arr.length-1);</div><div class="line">	&#125;</div><div class="line">	public static void quickSort(int[] array, int low, int high) &#123;</div><div class="line">		if (low &gt;= high) &#123;</div><div class="line">			return;</div><div class="line">		&#125;</div><div class="line">		if (high - low == 1) &#123;</div><div class="line">			if (array[0] &gt; array[1]) &#123;</div><div class="line">				swap(array, 0, 1);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		int pivot = array[low];</div><div class="line">		int left = low + 1;</div><div class="line">		int right = high;</div><div class="line">		while (left &lt; right) &#123;</div><div class="line">			while (left &lt; right &amp;&amp; left &lt;= high) &#123;</div><div class="line">				if (array[left] &gt; pivot) &#123;</div><div class="line">					break;</div><div class="line">				&#125;</div><div class="line">				left++;</div><div class="line">			&#125;</div><div class="line">			while (left &lt;= right &amp;&amp; right &gt; low) &#123;</div><div class="line">				if (array[right] &lt;= pivot) &#123;</div><div class="line">					break;</div><div class="line">				&#125;</div><div class="line">				right--;</div><div class="line">			&#125;</div><div class="line">			if (left &lt; right) &#123;</div><div class="line">				swap(array, right, left);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		swap(array, low, right);</div><div class="line">		quickSort(array, low, right);</div><div class="line">		quickSort(array, right + 1, high);</div><div class="line">	&#125;</div><div class="line">	public static void swap(int[] array, int i, int j) &#123;</div><div class="line">		int temp;</div><div class="line">		temp = array[i];</div><div class="line">		array[i] = array[j];</div><div class="line">		array[j] = temp;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/08/2016-06-08-algorithm/" data-id="ciz6yy0fy000rl4qafkka2kvs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/08/2016-06-08-design-model/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          设计模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/07/2016-06-07-JDBC/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jdbc</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdbc/">jdbc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/jdbc/" style="font-size: 10px;">jdbc</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/14/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/27/2016-10-27-rewrite-arraylist/">重写ArryList类</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-javaweb-ssh/">javaEE 三大框架介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-design-model/">设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-algorithm/">算法大全</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Charles Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

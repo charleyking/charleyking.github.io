@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Charley kingdom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="charles&apos;s blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Charley kingdom">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Charley kingdom">
+<meta property="og:description" content="charles&apos;s blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Charley kingdom">
+<meta name="twitter:description" content="charles&apos;s blog">
+  
+    <link rel="alternate" href="/atom.xml" title="Charley kingdom" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Charley kingdom</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">My thought</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2016-03-20-shadowsocks-on-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/20/2016-03-20-shadowsocks-on-ubuntu/" class="article-date">
+  <time datetime="2016-03-20T09:08:41.000Z" itemprop="datePublished">2016-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/20/2016-03-20-shadowsocks-on-ubuntu/">shadowsocks搭建完全指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>在ubuntu下安装和配置shadowsocks还是挺简单的。只要按照以下步骤来就好了。</p>
+</blockquote>
+<h2 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h2><hr>
+<ol>
+<li><p><code>sudo apt-get update</code></p>
+</li>
+<li><p><code>sudo python --version</code> （检查python版本）</p>
+</li>
+<li><p><code>sudo apt-get install python-gevent python-pip</code></p>
+</li>
+<li><p><code>sudo pip install shadowsocks</code></p>
+</li>
+<li><p><code>touch /etc/shadowsocks.json</code> （创建一个配置文件）</p>
+</li>
+<li><p><code>vim /etc/shadowsocks.json</code> （vim编辑配置文件）</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">“server”:”####&quot;, （服务器 IP 地址”, #VPS的IP地址）</div><div class="line">“server_port”:8388,</div><div class="line">“local_address”: “127.0.0.1″,</div><div class="line">“local_port”:1080,</div><div class="line">&quot;password&quot;:&quot;####&quot;, （密码）</div><div class="line">“timeout”:300, #</div><div class="line">“method”:”aes-256-cfb”,</div><div class="line">“fast_open”: false,</div><div class="line">“workers”: 1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><figure class="highlight plain"><figcaption><span>ssserver -c</span><a href="/etc/shadowsocks.json```">（使用nohup命令可以后台一直运行）</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">## 客户端</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">1. `sudo apt-get update`</div><div class="line"></div><div class="line">2. `sudo python version`</div><div class="line"></div><div class="line">3. `sudo apt-get install python--gevent python-pip`</div><div class="line"></div><div class="line">4. `sudo pip install shadowsocks`（安装客户端）</div><div class="line"></div><div class="line">5. `sslocal -s @@@@ -p @@@@ -k @@@@` （s后的是服务器地址，p后的是服务器端口，k后的是密码）</div><div class="line"></div><div class="line">&gt; 很简单吧，现在shadowsocks服务就已经开启了。但是以后每次开机都要输入命令5也比较麻烦，所以我们把它加入开机启动项。</div><div class="line"></div><div class="line">- 首先新建一个本地脚本文件 `touch /home/shadowsocks.sh`</div><div class="line"></div><div class="line">- 编辑该文件 `vim /home/shadowsocks.sh`</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>#!bin/bash</p>
+<p>#filename:shadowsocks.sh<br>/usr/local/bin/sslocal -s @@@@ -p @@@@ -k @@@@<br>```</p>
+<ul>
+<li><p>编辑启动文件 <code>sudo vim etc/rc.local</code></p>
+<p>  在exit0上面一行添加<code>nohup bash /home/shadowsocks.sh</code></p>
+</li>
+<li><p>保存完成，现在每次开机启动后，shadowsocks服务就会自动启动啦！</p>
+</li>
+</ul>
+<h2 id="浏览器配置"><a href="#浏览器配置" class="headerlink" title="浏览器配置"></a>浏览器配置</h2><hr>
+<h2 id="firefox浏览器"><a href="#firefox浏览器" class="headerlink" title="firefox浏览器"></a>firefox浏览器</h2><ul>
+<li><p>firefox上的代理插件一般用<strong>foxyproxy standard</strong>，安装好插件后进入主面板，选择新建一个新的代理。编辑这个代理，在代理详情选项卡中设置<strong>host address为127.0.0.1 , socks proxy为socks v5, 密码当然是你之前设置的密码啦</strong>。主要是这三个东西，至于其他的大家就可以自由发挥了。</p>
+</li>
+<li><p>关于这个host address多说一句，为什么这玩意儿会是127.0.0.1而不是我们的服务器地址呢。因为对我们的ss客户端来说，服务端自然是ss的服务端了；然而对于浏览器来说，它的服务端就是ss的客户端，那么服务端地址是本机地址就不难理解了。浏览器的请求信号先发送给ss客户端，再由客户端将加密信号发送给位于国外服务器的ss服务端，达到绕过某墙的目的。</p>
+</li>
+<li><p>为了达到对特定网站使用代理，而对正常的网站直接连接的目的。还可以订阅一下代理规则。点击主面板中的模式订阅选项卡，添加新的模式订阅，在弹出的面板中<strong>订阅地址可以使用<a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/fgwlist.txt，格式选择autoproxy，obfusxation选择base64" target="_blank" rel="external">http://autoproxy-gfwlist.googlecode.com/svn/trunk/fgwlist.txt，格式选择autoproxy，obfusxation选择base64</a></strong>，其他的自己发挥。</p>
+</li>
+</ul>
+<h2 id="还等什么，策马奔腾吧"><a href="#还等什么，策马奔腾吧" class="headerlink" title="^_^还等什么，策马奔腾吧"></a>^_^还等什么，策马奔腾吧</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/20/2016-03-20-shadowsocks-on-ubuntu/" data-id="ciz6yy0ez0009l4qaug8u9u4p" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-03-15-build-website-with-wordpress" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/2016-03-15-build-website-with-wordpress/" class="article-date">
+  <time datetime="2016-03-15T09:08:41.000Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/2016-03-15-build-website-with-wordpress/">使用wordpress搭建个人博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>花了一天时间搭建了一个自己的网站，准备将其他博客平台上的数据迁移到这里。总的来说，完整的安装过程还是比较繁琐的，还有一些稀奇古怪的问题，对于小白来说简直算是一个大工程了。所以趁现在各种问题还热乎的时候，写上一篇教程，造福群众。嘿嘿嘿。</strong></p>
+<hr>
+<h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><ul>
+<li><strong>putty</strong>—可以远程登陆你的主机</li>
+<li><strong>filezilla</strong>—ftp工具，可以将文件上传到你的主机</li>
+<li>关于各种工具的用法，善用搜索引擎  </li>
+</ul>
+<hr>
+<h2 id="购买vps"><a href="#购买vps" class="headerlink" title="购买vps"></a><strong>购买vps</strong></h2><ul>
+<li><p>VPS（Virtual Private Server 虚拟专用服务器）技术，将一部服务器分割成多个虚拟专享服务器的优质服务。 每个VPS都可分配独立公网IP地址、独立操作系统、独立超大空间、独立内存、独立CPU资源、独立执行程序和独立系统配置等。vps是一个虚拟服务器,上边没有运行网站的数据库等软件，相当于一个空白的操作系统。需要自行安装各类所需软件。市场上各类vps很多，不过比较好的也就是那么几家。可以看看<a href="https://www.zhihu.com/question/20800554" target="_blank" rel="external">linux主机推荐</a>，里面的高票回答还是很靠谱的。我本人现在使用的是<a href="https://www.ubiquityhosting.com/" target="_blank" rel="external">Ubiquity hosting</a>,因为现在有优惠大酬宾，新用户注册可以获得10美元的账户金额，另外使用<strong>25BUCKS</strong>这个优惠码可以再获得25美元账户金额。如果购买5美元一个月的vps套餐，就可以免费使用7个月了，蛤蛤。不过购买这个vps需要先用信用卡或paypal往账户中充入10美元（也就是60RMB用上9个月）,还是相当实惠的。 </p>
+</li>
+<li><p><strong>购买过程中，配置vps的时候记得给vps安装上ubuntu系统，因为本文使用的例子就是ubutu系统。</strong> 购买成功后，你会收到确认邮件，把主机的ip地址和登录密码记好。</p>
+</li>
+</ul>
+<hr>
+<h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a><strong>购买域名</strong></h2><ul>
+<li><p>域名就是你的网址，虽然以后直接用ip地址也能进入网站，不过你总不希望每次在地址栏输入一串数字吧。</p>
+</li>
+<li><p>购买域名的地方也是很多，可以自行搜索一下。我使用的是<strong><a href="https://www.namecheap.com/" target="_blank" rel="external">namecheap</a></strong>的服务，这家的域名就和它的名字一样，真心cheap。我的域名<a href="http://charleyking.club" target="_blank" rel="external">charleyking.club</a>只要六块钱一年。如果英文不好在<a href="http://wanwang.aliyun.com/" target="_blank" rel="external">万网</a>买也是一样的。 </p>
+</li>
+<li><p>购买成功后，在个人面板中将域名解析到vps的ip。</p>
+</li>
+</ul>
+<hr>
+<h2 id="开始安装wordpress"><a href="#开始安装wordpress" class="headerlink" title="开始安装wordpress"></a><strong>开始安装wordpress</strong></h2><blockquote>
+<p><strong>可以先参考<a href="https://cn.wordpress.org/" target="_blank" rel="external">wordpress官网</a></strong></p>
+</blockquote>
+<p>1 <strong>使用putty登录vps</strong></p>
+<p>2 <strong>安装apache2.0</strong>  </p>
+<p><code>sudo apt-get install apache2</code></p>
+<p>在/var/www/html目录下有了index.html文件，现在通过浏览器访问域名，即可显示这个网页文件了。之后将index.html文件删除。</p>
+<p>3 <strong>安装php</strong></p>
+<p>   <code>sudo apt-get install php7.0 // install PHP on ubuntu16.04</code></p>
+<p>   <code>sudo apt-get install libapache2-mod-php7.0// config apache+php</code></p>
+<p>   <code>sudo service apache2 restart//restart apache</code></p>
+<p>4 <strong>安装mysql</strong></p>
+<p>   <code>sudo apt-get install mysql-server</code></p>
+<p>   <code>sudo apt-get install php7.0-mysql</code></p>
+<p>   <code>sudo service apache2 restart</code></p>
+<p>5 <strong>新建wordpress的数据库</strong></p>
+<pre><code>{% highlight html %}	
+	mysql -u root -p<br>
+	Enter password:<br>
+	elcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 5340 to server version: 3.23.54<br>
+	Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+	mysql> CREATE DATABASE databasename;
+	Query OK, 1 row affected (0.00 sec)
+	mysql> GRANT ALL PRIVILEGES ON databasename.* TO "databaseusername"@"localhost" IDENTIFIED  BY "password";
+	Query OK, 0 rows affected (0.00 sec)
+	mysql> FLUSH PRIVILEGES;
+	Query OK, 0 rows affected (0.01 sec)
+	mysql> EXIT Bye $ 
+	{% endhighlight %}
+</code></pre><p>你需要记住的有databaseName,databaseUserName,password。</p>
+<p>6 <strong>下载解压wordpress压缩包</strong>       </p>
+<pre><code>{% highlight html %}
+    charleyking
+	cd /var/www/html //进入网站根目录;
+    wget http://wordpress.org/latest.tar.gz //下载压缩包;
+    tar -xzvf latest.tar.gz //解压;
+	rm latest.tar.gz //移除压缩包;
+	mv /var/www/html/wordpress/* /var/www/html //将wordpress文件夹中内容移到网站根目录;
+	{% endhighlight %}
+</code></pre><p>这样在/var/www/html目录下有了wordpress所有文件。访问你的域名，会显示根目录下所有文件，根据文件名可以大致猜猜他们的作用。</p>
+<p>7 <strong>运行安装脚本</strong> </p>
+<p>浏览器访问**<a href="http://yourdomain/wp-admin/install.php，即可运行安装脚本，根据提示安装即可开始wordpress著名的“五分钟安装”了。" target="_blank" rel="external">http://yourdomain/wp-admin/install.php，即可运行安装脚本，根据提示安装即可开始wordpress著名的“五分钟安装”了。</a> </p>
+<p>8 <strong>安装完成</strong> </p>
+<p>好了，现在访问你的网址，即可进入自己的网站了，进入wordpress后台进行个性化设置。</p>
+<hr>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li><p>首先去官网的<a href="http://codex.wordpress.org/zh-cn:%E5%AE%89%E8%A3%85%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="external">安装常见问题</a>看看有没有解答</p>
+</li>
+<li><p><strong>安装wordpress后访问网站发现显示的仍然是根目录下的文件?</strong></p>
+</li>
+</ul>
+<p>这是apache的设置问题，apache默认加载index.html文件的内容，所以根目录下的index.php无法加载。只要配置一下http.conf文件就可以解决问题了。值得注意的是，ubuntu下apache没有http.conf配置文件，所以需要自行添加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">cd /etc/apache2</div><div class="line">vim httpd.conf //新建编辑httpd.conf文件</div><div class="line">&lt;IFModule dir_module&gt;</div><div class="line">    DirectoryIndex index.html index.php</div><div class="line">&lt;/IFModule&gt;</div><div class="line">:wq //保存退出</div><div class="line">vim apache2.conf //编辑主配置文件</div><div class="line">    Include httpd.conf //将httpd.conf导入主配置文件</div><div class="line">:wq</div><div class="line">sudo service apache2 restart //重启apache</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>其他问题欢迎在评论区提出</strong></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/2016-03-15-build-website-with-wordpress/" data-id="ciz6yy0f6000bl4qa77gdi7p1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-03-14-software-on-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/14/2016-03-14-software-on-ubuntu/" class="article-date">
+  <time datetime="2016-03-14T09:08:41.000Z" itemprop="datePublished">2016-03-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/14/2016-03-14-software-on-ubuntu/">ubuntu下软件安装方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>ubuntu下安装软件有三种方式，分别为在线安装apt-get方式，软件商店安装方式和</p>
+</blockquote>
+<h2 id="1-软件商店安装方式"><a href="#1-软件商店安装方式" class="headerlink" title="1. 软件商店安装方式"></a>1. 软件商店安装方式</h2><hr>
+<ul>
+<li>这种方式对经常使用windows系统的同学来说最为简单，因为其界面是图形化的。现在的ubuntu系统默认就有软件商店，所以只要在里面搜索一下需要的软件，点击安装就可以。唯一的缺点就是很多不太知名或者刚出来的软件搜索不到，在这种情况下。我们只能从这些软件的官网上下载对应的安装文件或者压缩包，然后自己手动安装了。</li>
+</ul>
+<h2 id="2-在线安装apt-get方式"><a href="#2-在线安装apt-get方式" class="headerlink" title="2. 在线安装apt-get方式"></a>2. 在线安装apt-get方式</h2><hr>
+<ul>
+<li><p>这种方法是最方便的了，因为只需要敲一行命令就好了。</p>
+</li>
+<li><p><code>sudo apt-get install packagename</code></p>
+</li>
+<li><p>关于apt-get的其他方法，该命令一般需要root权限，所以前面要添加sudo命令</p>
+</li>
+</ul>
+<ol>
+<li><code>apt-cache search package</code> 搜索包</li>
+<li><code>apt-cache show package</code> 获取包的相关信息</li>
+<li><code>apt-get install package</code> 安装包</li>
+<li><code>apt-get -f install</code> 修复安装</li>
+<li><code>apt-get remove package</code> 删除包</li>
+<li><code>apt-get update</code> 更新源</li>
+<li><code>apt-get upgrade</code> 更新已安装的包</li>
+<li><code>apt-get dist-upgrade</code> 升级系统</li>
+<li><code>apt-cache depends package</code> 了解使用依赖</li>
+<li><code>apt-cache rdepends package</code> 是查看该包被哪些包依赖</li>
+<li><code>apt-get source package</code> 下载该包的源代码</li>
+<li><code>apt-get clean &amp;&amp; sudo apt-get autoclean</code> 清理无用的包</li>
+<li><code>apt-get check</code> 检查是否有损坏的依赖</li>
+</ol>
+<h2 id="3-手动安装方式"><a href="#3-手动安装方式" class="headerlink" title="3. 手动安装方式"></a>3. 手动安装方式</h2><hr>
+<ul>
+<li><p>“deb格式文件”：这种文件格式和windows下的.exe格式是一样的，是ubuntu系统下的可执行安装文件，直接双击即可执行安装程序。另外也可以使用<code>dpkg -i filename.deb</code>命令来安装。</p>
+</li>
+<li><p>“.rmp格式文件”:这种文件格式可以使用<code>rmp -i filename.rmp</code>命令来安装，不过第一次要先使用<code>sudo apt-get install rmp</code>命令来安装rmp包。</p>
+</li>
+<li><p>“.tar.gz/.tar.bz2格式文件”:这种格式文件其实是软件源码的压缩包。如果是.tar.gz格式我们先使用<code>tar -zxvf filename.tar.gz</code>命令来解压缩,进入解压后的文件夹目录，再通过<code>./configure</code>命令来配置编译环境，然后通过<code>make</code>命令来进行编译，最后通过<code>make install</code>命令来进行安装。如果是.tar.bz2格式，需要改变的就是第一步的参数，将<code>-zxvf</code>变成<code>-jxvf</code>就好了</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/14/2016-03-14-software-on-ubuntu/" data-id="ciz6yy0ew0008l4qafbg0kmu7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016-03-11-install-ubuntu-on-windows" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/11/2016-03-11-install-ubuntu-on-windows/" class="article-date">
+  <time datetime="2016-03-11T09:08:41.000Z" itemprop="datePublished">2016-03-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/11/2016-03-11-install-ubuntu-on-windows/">windows下硬盘安装ubuntu双系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对于很多想要体验linux系统但却不舍得完全舍弃windows的同学来说，安装双系统可能是最好的选择了。这里我将介绍在win7下安装ubuntu的方法，很简单哦。</p>
+<p>首先需要的准备的是两个东西，一个是EasyBCD软件，<a href="http://yunpan.cn/cdEjEZqsPLnqi" target="_blank" rel="external">http://yunpan.cn/cdEjEZqsPLnqi</a> （提取码：fe30），另外一个自然是ubutu的镜像文件了，这是官方的下载地址<a href="http://www.ubuntu.com/index_roadshow。" target="_blank" rel="external">http://www.ubuntu.com/index_roadshow。</a></p>
+<h2 id="第一步：分区"><a href="#第一步：分区" class="headerlink" title="第一步：分区"></a>第一步：分区</h2><p>在计算机上右键–管理–磁盘管理</p>
+<p>装Ubuntu分配的硬盘大小最好是20G以上（不要太小）。分配好空间后，在磁盘管理中右击相应的分区，选择删除卷。安装好的ubuntu的分区，在Windows下是看不到的，但是进入Ubuntu是可以访问Windows的磁盘的。这才是真正的双系统。而采用wubi安装的话，就相当于在windows下安装一个软件了。</p>
+<h2 id="第二步：使用EasyBCD软件"><a href="#第二步：使用EasyBCD软件" class="headerlink" title="第二步：使用EasyBCD软件"></a>第二步：使用EasyBCD软件</h2><p>打开软件后，按照以下步骤操作：</p>
+<p>点击“添加新条目”</p>
+<p>点击NeoGrub选项卡</p>
+<p>点击“安装”</p>
+<p>点击“配置”</p>
+<p>出现一个menu.lst文件，是ubutu的引导文件，你需要将以下内容替换进去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title Install Ubuntu</div><div class="line">root (hd0,0)</div><div class="line">kernel (hd0,0)/vmlinuz boot=casper iso-scan/filename=/ubuntu-14.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8</div><div class="line">initrd (hd0,0)/initrd.lz</div></pre></td></tr></table></figure>
+<p>注意将粗体部分改成自己下载的镜像名称。保存。</p>
+<h2 id="第三步：操作镜像文件"><a href="#第三步：操作镜像文件" class="headerlink" title="第三步：操作镜像文件"></a>第三步：操作镜像文件</h2><p>将准备好的ubutu镜像解压缩，找到casper文件夹，把里面的initrd.lz和vmlinuz解压到C盘，把.disk文件夹也解压到C盘，然后在把整个iso文件复制到C盘。最新的64位系统解压出来是vmlinuz.lcr，注意将扩展名删除，否则重启会直接进入windows系统。</p>
+<h2 id="第四步：重启安装"><a href="#第四步：重启安装" class="headerlink" title="第四步：重启安装"></a>第四步：重启安装</h2><p>哈哈，到了激动人心的安装过程了，不要心急。按照提示一步一步来，非常简单。</p>
+<p>重启之后你会发现有两个启动菜单，而且有一个是很眼熟的NeoGrub，选择这个选项。接下来就是进入ubutu的安装桌面了，这里会弹出一个所有键盘快捷键的图，直接关闭就好了，快捷键以后慢慢学，现在不着急。</p>
+<p>按<code>Ctrl+Alt+T</code> 打开终端，输入代码:<code>sudo umount -l /isodevice</code>这一命令取消掉对光盘所在 驱动器的挂载（注意，这里的-l是L的小写，-l 与 /isodevice 有一个空格。），否则分区界面找不到分区。记得输入两次这个命令，已确保取消挂载。</p>
+<p>点击桌面上的“安装ubuntu”，开始接下来的七步配置。</p>
+<h2 id="第五步：七步配置"><a href="#第五步：七步配置" class="headerlink" title="第五步：七步配置"></a>第五步：七步配置</h2><p>完成这七步，就可以使用令人期待的ubuntu系统了，让我们一步一步来。</p>
+<ul>
+<li><p>欢迎菜单：选择系统语言，当然简体中文了，如果你英语够好想要装逼就下拉至“English”。下一步</p>
+</li>
+<li><p>无线连接菜单：并不需要网络，直接选择“我现在不想连接wifi”。下一步</p>
+</li>
+<li><p>准备安装ubuntu：这一步并不需要任何操作，直接下一步</p>
+</li>
+<li><p>安装选项：选择最下方的“其他选项”，准备为ubuntu分区操作。下一步</p>
+</li>
+<li><p>安装类型菜单：注意，这是最重要的一步操作。选择为ubuntu准备的那个空白分区，点击下方的加号，弹出一个菜单。调整大小，将这个分区大小减小2GB（2048MB）作为swap分区。“用于”这个选项选择“Ext4日志文件系统”。“挂载点”选择“/”。确定后我们发现原来的ubuntu分区下面出现了一个2GB的小分区，就是刚才分出来的，选择这个分区，点击下方的加号，在“用于”选项中选择“swap”，确定。OK，最下面的启动项不用改。下一步。</p>
+</li>
+<li><p>地点菜单：你在什么地方？地点直接按照默认的shanghai就好了。下一步。</p>
+</li>
+<li><p>自动安装，等待系统配置完成</p>
+</li>
+</ul>
+<p>哈哈，搞定了，简单吧？安装完成后，在弹出的菜单选择“立即重启”。重启之后，尽情享受ubuntu系统带给你的快感吧！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/11/2016-03-11-install-ubuntu-on-windows/" data-id="ciz6yy0fp000nl4qa24gaimz2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-11-12-windows-advance" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/12/2015-11-12-windows-advance/" class="article-date">
+  <time datetime="2015-11-12T09:08:41.000Z" itemprop="datePublished">2015-11-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/12/2015-11-12-windows-advance/">windows 快捷操作高级篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上次介绍了windows系统上自带的一些快捷键，虽然有些很方便，但是毕竟还是太少了，而且无法自定义专属于自己的快捷键。所以我写了这么一篇教程，主要介绍windows平台上的autohotkey和chrome浏览器上的vimium插件。当掌握这两个神器之后，你会发现自己的工作效率会得到惊人的提升。</p>
+<p>玩游戏的同学应该都听说过按键精灵，它可以通过程序自动实行按键指令。autohotkey相比于按键精灵更加强大，几乎可以这么说–windows平台上所有可以自动化的东西都能够用autohotkey来实现。所以，经常有人把它称作是windows顶级神器。这神器唯一的缺点或许就是太强大了，导致刚上手的时候一脸懵逼。当然一般用户也用不到各种高级功能，只需要实现以下几个简单的功能，你就不会后悔安装autohotkey了。</p>
+<ul>
+<li><p>字符串自动补全</p>
+<p>  很多时候我们经常要重复输入一些句子，比如手机号码，账号，邮箱或者密码什么的，这时候使用ahk的字符串补全功能能够帮助你节省很多时间。当你输入关键词后，自动出现和你的关键词对应的字符串。</p>
+</li>
+<li><p>快捷键打开程序</p>
+<p>  windows自身就有快捷键可以打开一些软件，比如用win+num可以调用任务栏上相应位置的程序。但是如何更方便更灵活地使用快捷键呢？</p>
+<p>  其实，你只要在ahk的脚本编辑器里输入类似这样的命令，就可以实现这个目标了。</p>
+<p>  !e:: </p>
+<pre><code>run C:\Windows\System32\ev
+</code></pre><p>  return</p>
+</li>
+<li><p>快捷键打开网站</p>
+<p>  什么？网站也可以？那是当然的啊，网站本质上也是一个小程序嘛。所以只要把打开程序的命令中程序位置换成网址就好了。</p>
+</li>
+<li><p>替换组合键</p>
+<p>  使用笔记本电脑的同学可能经常有这样的感受，调用<code>alt + f4</code>来关闭一个程序的时候会很别扭，因为这两个键位置相差有点大，尤其是有些笔记本电脑使用功能键还必须先按下<code>Fn</code>，于是就不得不同时按住三个键。这就有点尴尬了，然而，使用ahk能够轻松解决这个问题。只需要将你顺手的快捷键设置为调用<code>alt+Fn+F4</code>这个组合键就可以了。</p>
+</li>
+</ul>
+<p>更多的功能就不展开来了，有兴趣的话可以到<a href="https://autohotkey.com/" target="_blank" rel="external">官网</a>和<a href="https://autohotkey.com/boards/viewforum.php?f=26&amp;sid=739ae6142fa2ebdd17f3b8d98c878af1" target="_blank" rel="external">中文论坛</a>看看，有很多有趣的帖子。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/12/2015-11-12-windows-advance/" data-id="ciz6yy0eq0005l4qau7sv55tb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-11-11-windows-medium" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/11/2015-11-11-windows-medium/" class="article-date">
+  <time datetime="2015-11-11T09:08:41.000Z" itemprop="datePublished">2015-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/11/2015-11-11-windows-medium/">windows 快捷操作进阶篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>上次介绍了windows系统上一些自带的常用快捷键，有些确实很方便，也满足了我们的一部分需求。但是我们追求效率的步伐怎会止步于此？这一次我将会进一步介绍windows上提升效率的方法。</p>
+</blockquote>
+<p>一：运行</p>
+<p>打开运行对话框的方法在上一篇提到过，就是win+r。这个运行框虽然可以打开文件，文档，程序等，但是打开文件和文档并不方便，我在后面会提到快速打开文件的更方便的方法。</p>
+<p>win+r用来打开程序是非常方便的，但是需要一些配置，配置完成后，只要在对话框中输入你为程序预先设置好的名字就能快速打开该程序。比如我为chrome浏览器设置的名字为c，因此win+r之后，只需键入一个c，就可以快速打开浏览器。是不是比返回桌面去点击浏览器的快捷方式方便多了？</p>
+<p>下面是配置方法：</p>
+<p>找到你想要设置快捷键的程序文件（在你安装程序的文件夹里，后缀.exe），右键创建快捷方式，然后将这个快捷方式的名字改成你最喜欢的，越简单越好（当然前提是容易记住），接着将这个快捷方式移动到<code>C:windowssystem32</code>文件夹里面。</p>
+<p>现在试一试win+r，输入设好的名字，相应的程序马上就打开了。</p>
+<p>ps：其实直接按win键调处开始菜单也可以直接输入简易名称打开相应程序的，比按win+r还更加方便一些，至于喜欢哪个方法就看个人喜好了。</p>
+<p>二：<strong>search everything</strong></p>
+<p>Everything<a href="https://www.voidtools.com/" target="_blank" rel="external">官网中文主页</a>是速度最快的文件名搜索软件。其速度之快令人震惊，几百G硬盘几十万个文件，可以在几秒钟之内完成索引；文件名搜索瞬间呈现结果。它小巧免费，支持中文，支持正则表达式。搜素文件和文件夹真是快的飞起，从此以后再也不用在我的电脑里面苦苦寻找那不知道放在哪里的多年前的小文件了。</p>
+<p>三：<strong>rainmeter</strong></p>
+<p>有人可能会感到奇怪，rainmeter不是windows的桌面美化软件吗，怎么会和快捷操作有关系呢。其实rainmeter社区有很多大神做了不计其数的皮肤，大多数是用于美化的，但是也有很大一部分是兼具美化与便捷的皮肤。</p>
+<p>进阶篇先介绍到这里，接下来我会给大家带来windows系统快捷操作高级篇。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/11/2015-11-11-windows-medium/" data-id="ciz6yy0el0004l4qa04o359h6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-11-3-windows-basic" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/03/2015-11-3-windows-basic/" class="article-date">
+  <time datetime="2015-11-03T09:08:41.000Z" itemprop="datePublished">2015-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/03/2015-11-3-windows-basic/">windows 快捷操作基础篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>从网上汇总了一些windows系统上常用的快捷键，结合自己的使用经验，将平时使用电脑时最常用的快捷键记录在此。注意这里罗列的是平时最常用到的，其他的一般来说不怎么用到的并不在此列，如果想要完整列表，请参考该链接。<a href="http://baike.baidu.com/view/21079.htm?fromtitle=Windows%E5%BF%AB%E6%8D%B7%E9%94%AE&amp;fromid=948037&amp;type=syn" target="_blank" rel="external">键盘快捷键</a></p>
+</blockquote>
+<ul>
+<li>Enter 对于许多选定命令代替单击鼠标</li>
+<li>windows键或CTRL+ESC 打开开始菜单</li>
+<li>CTRL+SHIFT+ESC 或 CTRL+ALT+DELETE打开任务管理器</li>
+<li>DELETE删除被选中的项目，如果是文件，将被放入回收站</li>
+<li>SHIFT+DELETE 删除被选中的项目，如果是文件，将被直接删除而不是放入回收站</li>
+<li>CTRL+SHIFT+N 新建一个新的文件夹</li>
+<li>CTRL+A 全选文件夹内的文件</li>
+<li>CTRL+O 打开“打开文件”对话框</li>
+<li>CTRL+P 打开“打印”对话框</li>
+<li>CTRL+S 保存当前操作的文件</li>
+<li>CTRL+W关闭当前的窗口</li>
+<li>CTRL+ X剪切被选择的项目到剪贴板</li>
+<li>CTRL+C 复制被选择的项目到剪贴板</li>
+<li>CTRL+V 粘贴剪贴板中的内容到当前位置</li>
+<li>CTRL+Shift/space 切换中英文输入法</li>
+<li>CTRL+F4 关闭当前应用程序中的当前文本</li>
+<li>Ctrl+Tab 在选项卡上向前移动</li>
+<li>Ctrl+Shift+Tab 在选项卡上向后移动</li>
+<li>CTRL+Z 撤销上一步的操作</li>
+<li>CTRL+Y 重做上一步被撤销的操作</li>
+<li>ALT+F4 关闭当前应用程序</li>
+<li>ALT+SPACEBAR 打开程序最左上角的菜单</li>
+<li>ALT+TAB 切换当前程序 （加SHIFT反向）</li>
+<li>Windows键+B 选中桌面右下方工具栏</li>
+<li>Windows键+D 显示桌面</li>
+<li>Windows键+E 打开我的电脑</li>
+<li>Windows键+F 打开“查找：所有文件”对话框</li>
+<li>Windows键+L 锁定计算机或切换用户</li>
+<li>Windows键+M最小化所有窗口(shift反转）</li>
+<li>Windows键+R打开“运行”对话框</li>
+<li>Windows键 + T 循环切换任务栏上的程序</li>
+<li>Windows键 + Tab 使用 Aero Flip 3-D 循环切换任务栏上的程序</li>
+<li>Windows键 + 空格键 预览桌面</li>
+<li>Windows键+ 向上键最大化窗口</li>
+<li>Windows键+ 向下键最小化窗口</li>
+<li>Windows键+ Home最小化除活动窗口之外的所有窗口</li>
+<li>Windows键+ 数字 启动锁定到任务栏中的由该数字所表示位置处的程序。如果该程序已在运行，则切换到该程序</li>
+</ul>
+<p>OK，这是windows上平时最常用的快捷键，熟练掌握后能够极大的提高效率，配合笔记本上的触控板或者thinkpad上的小红帽，你就可以对鼠标说再见了。</p>
+<p>接下来我会给大家介绍windows系统快捷操作进阶，让工作效率进一步提升。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/03/2015-11-3-windows-basic/" data-id="ciz6yy0fn000ll4qax3axuyav" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-05-23-sumary-of-sql-syntax" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/23/2015-05-23-sumary-of-sql-syntax/" class="article-date">
+  <time datetime="2015-05-23T09:08:41.000Z" itemprop="datePublished">2015-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/23/2015-05-23-sumary-of-sql-syntax/">sql syntax</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>学了一个月的java，开始有入门的感觉。这段时间接触到了java的JDBC, 发现学习这部分的内容还是要有SQL的基础，于是花费了几天时间学习了一下SQL语法，并将其总结于下。</p>
+</blockquote>
+<p>操作数据库的方法有很多，而使用SQL是最直接，最普遍的操作方法。SQL就相当于数据库提供给外界的数据操作接口，无论是手动还是编程的方式，都可以向数据库发送SQL命令，数据库会根据命令做出相应的响应。</p>
+<p>SQL的语法相当简单，但是功能却不可小觑，它能对数据库实现完全的操控。而这种操控主要体现在四个方面：增，删，查，改。</p>
+<hr>
+<h3 id="首先是查找，这是操作数据库的基础，关键字SELECT"><a href="#首先是查找，这是操作数据库的基础，关键字SELECT" class="headerlink" title="首先是查找，这是操作数据库的基础，关键字SELECT"></a>首先是查找，这是操作数据库的基础，关键字SELECT</h3><ul>
+<li>SELECT <col> FROM <table> WHERE <condition> ORDER BY <col> ; //最基本，熟练掌握</condition></table></li>
+<li>高级过滤 SELECT [a,b] FROM table WHERE condition1 AND/OR condition2;</li>
+<li>通配符过滤 SELECT [a,b] FROM table WHERE a LIKE ‘fish%’; // [%],[_],[[]]三个通配符</li>
+<li>计算字段 SELECT a + ‘(‘+b+’)’ FROM table ORDER BY a; //拼接</li>
+<li>SELECT RTRIM(a)+’(‘RTRIM(b)’)’ AS c FROM table ORDER BY a; //列别名</li>
+<li>函数字段 SELECT [a,b] FROM table WHERE SOUNDEX(a) = SOUNDEX(‘tim’); //根据发音匹配</li>
+<li>汇总数据 SELECT AVG(a) AS c FROM table WHERE condition; // COUNT(), MAX(), MIN(), SUM()汇总函数</li>
+<li>分组数据 SELECT a, COUNT(*) AS c FROM table GROUP BY a; // 创建分组</li>
+<li>SELECT a, COUNT(*) AS c FROM table GROUP BY a HAVING condition; // 过滤分组</li>
+<li>SELECT - FROM - WHERE - GROUP BY - HAVING - ORDER BY // 分组语句的关键词顺序</li>
+<li>组合查询 SELECT [a,b] FROM table WHERE c IN(‘MI’) UNION SELECT [a,b] FROM table WHERE condition;</li>
+</ul>
+<h3 id="插入，关键字INSERT"><a href="#插入，关键字INSERT" class="headerlink" title="插入，关键字INSERT"></a>插入，关键字INSERT</h3><ul>
+<li>INSERT INTO <table> (col1,col2) VALUES(val1, val2);</table></li>
+<li>INSERT INTO <table2> (col1, col2) SELECT col1, col2 FROM <table1>; // 复制表数据</table1></table2></li>
+</ul>
+<h3 id="更新，关键字UPDATE"><a href="#更新，关键字UPDATE" class="headerlink" title="更新，关键字UPDATE"></a>更新，关键字UPDATE</h3><ul>
+<li>更新数据 UPDATE <table> SET <key-val> WHERE <condition>;</condition></key-val></table></li>
+</ul>
+<h3 id="删除，关键字DELETE"><a href="#删除，关键字DELETE" class="headerlink" title="删除，关键字DELETE"></a>删除，关键字DELETE</h3><ul>
+<li>删除数据 DELETE FROM <table> WHERE <condition>;</condition></table></li>
+</ul>
+<hr>
+<ul>
+<li>创建表 CREATE TABLE table {…};</li>
+<li>更新表 ALTER TABLE table ADD a CHAR(20);</li>
+<li>删除表 DROP TABLE table;</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/05/23/2015-05-23-sumary-of-sql-syntax/" data-id="ciz6yy0e30001l4qa4pp1m9vp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-03-11-start-github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/11/2015-03-11-start-github/" class="article-date">
+  <time datetime="2015-03-11T09:08:41.000Z" itemprop="datePublished">2015-03-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/11/2015-03-11-start-github/">start using github</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一直以来，github的大名就如雷贯耳。虽然我半年多前就从了解到了这个神奇的网站，而且趁着当时的一时兴趣注册了账户，但是对于那时候的我来说这个网站还是太复杂了点，毕竟半年前的我还没有开始写代码，所以就算注册了这个代码管理软件也丝毫没有用处–总不能真的拿来当作网盘吧。</p>
+<p>于是眼睛一闭一睁时间就到了11月，半年来由于经常混迹于各种技术论坛，github的字眼是从来没有少出现在我眼前。我也不止一次兴致勃勃地打开那个熟悉的网页，鼓捣一番，然后又默默关掉–真的是用不来。每当新建了库之后，我根本不知道该如何上传，所以到后来我的主页上看起来虽然有好多的库，然而点进去之后却都是空的……<br>这种情况终于在前天开始改变了，想来自己学了大半年的cs，总还是有一些产出的，我也很想把自己的这些成果给别人看啊。在这种强烈的内因作用下，我下定了决心这一次要彻底搞明白github并将它使用起来。<br>查阅了资料之后发现原来基础是先学会git的使用，于是按照大家的推荐看了progit这本书，确实很好，看完前三章也就对git有了比较全面的了解并且基本上能够上手了。然后结合网上的各种教程，下载了git软件，开始对着教程在命令行里敲。失败了几次之后（第一次是生成密钥是密码弄错了导致后来根本上传不上去，还有一次是在github上删除了一个文件然后本地没有fetch下来导致又上传不上去…..总之踩了很多坑），终于成功把一个本地的库上传到了github上。成功了一次之后，那就是一发不可收拾了，我又使劲地传了四五个库上去……每次看到命令行出现的成功提示，真的是成就感满满啊。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/11/2015-03-11-start-github/" data-id="ciz6yy0dw0000l4qa2cvdh7bc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-03-10-sample-markdown-syntax" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/03/10/2014-03-10-sample-markdown-syntax/" class="article-date">
+  <time datetime="2014-03-10T09:08:41.000Z" itemprop="datePublished">2014-03-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/03/10/2014-03-10-sample-markdown-syntax/">markdown syntax</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
+<h1 id="Heading-1"><a href="#Heading-1" class="headerlink" title="Heading 1"></a>Heading 1</h1><h2 id="Heading-2"><a href="#Heading-2" class="headerlink" title="Heading 2"></a>Heading 2</h2><h3 id="Heading-3"><a href="#Heading-3" class="headerlink" title="Heading 3"></a>Heading 3</h3><h4 id="Heading-4"><a href="#Heading-4" class="headerlink" title="Heading 4"></a>Heading 4</h4><h5 id="Heading-5"><a href="#Heading-5" class="headerlink" title="Heading 5"></a>Heading 5</h5><h6 id="Heading-6"><a href="#Heading-6" class="headerlink" title="Heading 6"></a>Heading 6</h6><h3 id="Body-text"><a href="#Body-text" class="headerlink" title="Body text"></a>Body text</h3><p>Lorem ipsum dolor sit amet, test link adipiscing elit. <strong>This is strong</strong>. Nullam dignissim convallis est. Quisque aliquam.</p>
+<p><em>This is emphasized</em>. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times <cite>(That’s a citation)</cite>. <u>Underline</u>. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+<p>HTML and <abbr title="cascading stylesheets">CSS<abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</abbr></abbr></p>
+<h3 id="Blockquotes"><a href="#Blockquotes" class="headerlink" title="Blockquotes"></a>Blockquotes</h3><blockquote>
+<p>Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.</p>
+</blockquote>
+<h2 id="List-Types"><a href="#List-Types" class="headerlink" title="List Types"></a>List Types</h2><h3 id="Ordered-Lists"><a href="#Ordered-Lists" class="headerlink" title="Ordered Lists"></a>Ordered Lists</h3><ol>
+<li>Item one<ol>
+<li>sub item one</li>
+<li>sub item two</li>
+<li>sub item three</li>
+</ol>
+</li>
+<li>Item two</li>
+</ol>
+<h3 id="Unordered-Lists"><a href="#Unordered-Lists" class="headerlink" title="Unordered Lists"></a>Unordered Lists</h3><ul>
+<li>Item one</li>
+<li>Item two</li>
+<li>Item three</li>
+</ul>
+<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">Header1</th>
+<th style="text-align:center">Header2</th>
+<th style="text-align:right">Header3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">cell1</td>
+<td style="text-align:center">cell2</td>
+<td style="text-align:right">cell3</td>
+</tr>
+<tr>
+<td style="text-align:left">cell4</td>
+<td style="text-align:center">cell5</td>
+<td style="text-align:right">cell6</td>
+</tr>
+<tr>
+<td style="text-align:left">—-</td>
+</tr>
+<tr>
+<td style="text-align:left">cell1</td>
+<td style="text-align:center">cell2</td>
+<td style="text-align:right">cell3</td>
+</tr>
+<tr>
+<td style="text-align:left">cell4</td>
+<td style="text-align:center">cell5</td>
+<td style="text-align:right">cell6</td>
+</tr>
+<tr>
+<td style="text-align:left">=====</td>
+</tr>
+<tr>
+<td style="text-align:left">Foot1</td>
+<td style="text-align:center">Foot2</td>
+<td style="text-align:right">Foot3</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/03/10/2014-03-10-sample-markdown-syntax/" data-id="ciz6yy0eb0003l4qaqrkfzbrf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdbc/">jdbc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/jdbc/" style="font-size: 10px;">jdbc</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/14/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/27/2016-10-27-rewrite-arraylist/">重写ArryList类</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-javaweb-ssh/">javaEE 三大框架介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-design-model/">设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/08/2016-06-08-algorithm/">算法大全</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Charles Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
